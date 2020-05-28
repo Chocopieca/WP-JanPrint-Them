@@ -1,0 +1,132 @@
+@import "colors"
+@import "test"
+@import "reset"
+
+// font
+@font-face 
+    font-family: "Nether"
+    src: url(../fonts/nether/nether.ttf) format('truetype')
+
+// global
+html
+    font-size: 14px
+body
+    font-family: "roboto", sans-serif
+    color: $dark-gray-text
+    background: $bg-color
+    padding: 19px 15px
+img
+    max-width: 100%
+    height: auto
+a
+    color: $dark-gray-text
+a:hover
+    text-decoration: none
+    color: $dark-gray-text
+a:focus, button:focus
+    border: 0
+    outline: 0
+li
+    a
+        text-transform: uppercase
+        font-weight: 300
+
+// header
+header
+    .logo
+        margin-right: 15px
+    .navbar
+        transition: all 0s ease
+        text-transform: uppercase
+        font-size: 18px
+        font-weight: lighter
+        text-align: center
+        display: flex
+        justify-content: center
+        flex-flow: column
+        position: absolute
+        left: 0
+        right: 0
+        top: 0
+        background: $bg-color
+        padding-top: 135px
+        z-index: 50
+        ul
+            li
+                margin-top: 37px
+        .social-links
+            margin-top: 107px
+            margin-bottom: 35px
+            a
+                display: inline-block
+                width: 20px
+                height: 20px
+                background-image: url(../img/css_sprites.png)
+            .twitter
+                background-position: 30px -46px
+            .facebook
+                background-position: -10px 28px
+            .instagram
+                background-position: -60px -51px
+
+    .show + a + .nav-right-block
+        button
+            background-position: -6px -52px
+    .nav-right-block
+        margin-top: 20px
+        button
+            position: relative
+            z-index: 100
+            display: inline-block
+            width: 31px
+            height: 23px
+            background-image: url(../img/css_sprites.png)
+            background-position: -10px -10px
+            margin-left: 35px
+            padding: 0
+        div
+            display: inline-block
+            width: 20px
+            height: 23px
+            background-image: url(../img/css_sprites.png)
+        .surch
+            background-position: -45px 30px
+        .like
+            background-position: 30px -7px
+            margin: 0 19px
+        .basket
+            background-position: -60px -10px
+    .navbar-top
+        margin-top: 25px
+        li
+            display: inline-block
+            margin: 0 15px
+.wrapper
+    .slogan
+        font-family: "Nether"
+        font-size: 35px
+        display: flex
+        justify-content: center
+        text-align: end
+        margin: 40px 0 44px
+    .baner-carousel
+        color: $white-text
+        text-transform: uppercase
+        font-weight: bold
+        .first-carousel
+            position: relative
+            p
+                position: absolute
+                left: 20px
+                top: 40px
+            div[class|="baner"]
+                overflow: hidden
+                height: 175px
+            .baner-first
+                font-size: 20px
+                &::before
+                    background-image: url(../img/new.png)
+                    position: absolute
+                    left: 0
+
+
