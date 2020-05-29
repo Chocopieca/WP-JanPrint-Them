@@ -225,6 +225,23 @@ header .navbar-top li {
   position: relative;
 }
 
+.wrapper .mobile .first-carousel .owl-dots {
+  margin-top: 17px;
+  text-align: center;
+}
+
+.wrapper .mobile .first-carousel .owl-dots button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #adafb3;
+  margin-right: 7px;
+}
+
+.wrapper .mobile .first-carousel .owl-dots .active {
+  background-color: #636363;
+}
+
 .wrapper .mobile .first-carousel div[class|="baner"] {
   margin-top: 44px;
   position: relative;
@@ -285,22 +302,33 @@ header .navbar-top li {
   font-weight: bold;
 }
 
-.wrapper .tablet .tablet-baner-one {
-  position: relative;
+.wrapper .tablet div[class|="tablet-baner"] p {
+  position: absolute;
+}
+
+.wrapper .tablet div[class|="tablet-baner"] .button {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  width: 200px;
+  height: 40px;
+  margin: 0 auto;
+  color: #ffffff;
+}
+
+.wrapper .tablet div[class|="tablet-baner"] .button p {
+  position: static;
+  text-align: center;
+  margin: 15px 0;
 }
 
 .wrapper .tablet .tablet-baner-one p {
-  position: absolute;
   left: 10px;
   top: 30px;
 }
 
-.wrapper .tablet .tablet-baner-two {
-  position: relative;
-}
-
 .wrapper .tablet .tablet-baner-two p {
-  position: absolute;
   right: 32px;
   bottom: 123px;
 }
@@ -319,7 +347,10 @@ header .navbar-top li {
     width: 50px;
     height: 50px;
   }
-  .wrapper .tablet .tablet-baner-two::before {
+  .wrapper .tablet .tablet-baner-two {
+    text-align: end;
+  }
+  .wrapper .tablet .tablet-baner-two ::before {
     width: 45px;
     height: 45px;
   }
@@ -337,6 +368,10 @@ header .navbar-top li {
   }
   .wrapper .tablet div[class|="tablet-baner"]::before {
     top: -25px;
+  }
+  .wrapper .tablet div[class|="tablet-baner"] .button p {
+    margin: 15px 0;
+    font-size: 16px;
   }
   .wrapper .tablet .tablet-baner-one p {
     left: 10px;
