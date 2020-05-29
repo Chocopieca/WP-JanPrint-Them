@@ -30,9 +30,20 @@ li
     a
         text-transform: uppercase
         font-weight: 300
+.hidden
+    overflow: hidden
+    display: inline-block
+.button
+    width: 289px
+    height: 40px
+    border-radius: 100px
+    background: $blue-button
+    box-sizing: border-box
+    display: block
 
 // header
 header
+    margin-bottom: 30px
     .logo
         margin-right: 15px
     .navbar
@@ -108,25 +119,134 @@ header
         display: flex
         justify-content: center
         text-align: end
-        margin: 40px 0 44px
-    .baner-carousel
+    .mobile
         color: $white-text
         text-transform: uppercase
         font-weight: bold
         .first-carousel
             position: relative
+            div[class|="baner"]
+                margin-top: 44px
+                position: relative
+                text-transform: uppercase
+                font-weight: bold
+                .hidden
+                    display: block
+                    height: 233px
+                    margin-bottom: 19px
+                    p
+                        position: absolute
+                        left: 20px
+                        top: 40px
+                        font-size: 20px
+                .button
+                    display: block
+                    text-align: center
+                    margin: 0 auto
+                    p
+                        padding-top: 14px
+                        font-size: 16px
+                        color: $white-text
+.baner-first, .tablet-baner-one
+    &::before
+        content: ""
+        background-image: url(../img/new.png)
+        background-size: contain
+        position: absolute
+        left: 10px
+        top: -35px
+        width: 69px
+        height: 69px
+.baner-second, .tablet-baner-two
+    &::before
+        content: ""
+        background-image: url(../img/sale.png)
+        background-size: contain
+        position: absolute
+        right: 10px
+        top: -35px
+        width: 64px
+        height: 64px
+.wrapper
+    .tablet
+        text-transform: uppercase
+        color: $white-text
+        font-weight: bold
+        .tablet-baner-one
+            position: relative
             p
                 position: absolute
-                left: 20px
-                top: 40px
-            div[class|="baner"]
-                overflow: hidden
-                height: 175px
-            .baner-first
-                font-size: 20px
+                left: 10px
+                top: 30px
+        .tablet-baner-two
+            position: relative
+            p
+                position: absolute
+                right: 32px
+                bottom: 123px
+
+// Extra small devices (portrait phones, less than 576px)
+@media (min-width: 575.98px)
+    body
+
+// Small devices (landscape phones, less than 768px)
+@media (min-width: 767.98px)
+    header
+        margin-bottom: 40px
+    .wrapper
+        .slogan
+            p
+                margin: 46px 0
+        .tablet
+            div[class|="tablet-baner"]
                 &::before
-                    background-image: url(../img/new.png)
-                    position: absolute
-                    left: 0
+                    top: -25px
+            .tablet-baner-one::before
+                width: 50px
+                height: 50px
+            .tablet-baner-two::before
+                width: 45px
+                height: 45px
+// Medium devices (tablets, less than 992px)
+@media (min-width: 991.98px)
+    header
+        margin-bottom: 45px
+    .wrapper
+        .slogan
+            p
+                font-size: 55px
+        .tablet
+            font-size: 24px
+            div[class|="tablet-baner"]
+                &::before
+                    top: -25px
+            .tablet-baner-one
+                p
+                    left: 10px
+                    top: 40px
+            .tablet-baner-two
+                p
+                    right: 45px
+                    bottom: 165px
+            .tablet-baner-one::before
+                width: 69px
+                height: 69px
+            .tablet-baner-two::before
+                width: 64px
+                height: 64px
 
+// Large devices (desktops, less than 1200px)
+@media (min-width: 1199.98px)
+    .wrapper
+        .tablet
+            .tablet-baner-one
+                p
+                    left: 10px
+                    top: 45px
+            .tablet-baner-two
+                p
+                    right: 55px
+                    bottom: 200px
 
+// Extra large devices (large desktops)
+// No media query since the extra-large breakpoint has no upper bound on its width

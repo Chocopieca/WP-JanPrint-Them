@@ -60,24 +60,44 @@
     <div class="wrapper container-fluid px-0">
       <div class="container baner-block">
         <div class="row">
-          <div class="col-12 slogan">
+          <div class="col-12 col-md-4 order-md-2 slogan">
             <p>Find the best<br>for you</p>
           </div>
-          <div class="col-12 baner-carousel px-0">
+          <div class="col-12 baner-carousel px-0 d-md-none mobile">
             <div class="owl-carousel first-carousel">
               <div class="baner-first">
-                <div>
+                <div class="hidden">
                   <p>postcards</p>
                   <img src="/img/poster-1.png" alt="postcards">
-
                 </div>
+                <a href="#" class="button">
+                  <p>shop now</p>
+
+                </a>
               </div>
+
               <div class="baner-second">
-                <div>
-                  <img src="/img/poster-2.png" alt="postcards">
-
+                <div class="hidden">
+                  <p>sale</p>
+                  <img src="/img/poster-2.png" alt="sale">
                 </div>
+                <a href="#" class="button">
+                  <p>shop now</p>
+                </a>
               </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 order-1 tablet d-none d-md-inline-block">
+            <div class="tablet-baner-one">
+              <p>postcards</p>
+              <img src="/img/poster-1.png" alt="postcards">
+            </div>
+          </div>
+          <div class="col-md-4 order-3 tablet d-none d-md-inline-block">
+            <div class="tablet-baner-two">
+              <p>sale</p>
+              <img src="/img/poster-2.png" alt="sale">
             </div>
           </div>
         </div>

@@ -77,6 +77,25 @@ li a {
   font-weight: 300;
 }
 
+.hidden {
+  overflow: hidden;
+  display: inline-block;
+}
+
+.button {
+  width: 289px;
+  height: 40px;
+  border-radius: 100px;
+  background: #4771e6;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+}
+
+header {
+  margin-bottom: 30px;
+}
+
 header .logo {
   margin-right: 15px;
 }
@@ -194,36 +213,156 @@ header .navbar-top li {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: end;
-  margin: 40px 0 44px;
 }
 
-.wrapper .baner-carousel {
+.wrapper .mobile {
   color: #ffffff;
   text-transform: uppercase;
   font-weight: bold;
 }
 
-.wrapper .baner-carousel .first-carousel {
+.wrapper .mobile .first-carousel {
   position: relative;
 }
 
-.wrapper .baner-carousel .first-carousel p {
+.wrapper .mobile .first-carousel div[class|="baner"] {
+  margin-top: 44px;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.wrapper .mobile .first-carousel div[class|="baner"] .hidden {
+  display: block;
+  height: 233px;
+  margin-bottom: 19px;
+}
+
+.wrapper .mobile .first-carousel div[class|="baner"] .hidden p {
   position: absolute;
   left: 20px;
   top: 40px;
-}
-
-.wrapper .baner-carousel .first-carousel div[class|="baner"] {
-  overflow: hidden;
-  height: 175px;
-}
-
-.wrapper .baner-carousel .first-carousel .baner-first {
   font-size: 20px;
 }
 
-.wrapper .baner-carousel .first-carousel .baner-first::before {
+.wrapper .mobile .first-carousel div[class|="baner"] .button {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.wrapper .mobile .first-carousel div[class|="baner"] .button p {
+  padding-top: 14px;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.baner-first::before, .tablet-baner-one::before {
+  content: "";
   background-image: url(../img/new.png);
+  background-size: contain;
   position: absolute;
-  left: 0;
+  left: 10px;
+  top: -35px;
+  width: 69px;
+  height: 69px;
+}
+
+.baner-second::before, .tablet-baner-two::before {
+  content: "";
+  background-image: url(../img/sale.png);
+  background-size: contain;
+  position: absolute;
+  right: 10px;
+  top: -35px;
+  width: 64px;
+  height: 64px;
+}
+
+.wrapper .tablet {
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.wrapper .tablet .tablet-baner-one {
+  position: relative;
+}
+
+.wrapper .tablet .tablet-baner-one p {
+  position: absolute;
+  left: 10px;
+  top: 30px;
+}
+
+.wrapper .tablet .tablet-baner-two {
+  position: relative;
+}
+
+.wrapper .tablet .tablet-baner-two p {
+  position: absolute;
+  right: 32px;
+  bottom: 123px;
+}
+
+@media (min-width: 767.98px) {
+  header {
+    margin-bottom: 40px;
+  }
+  .wrapper .slogan p {
+    margin: 46px 0;
+  }
+  .wrapper .tablet div[class|="tablet-baner"]::before {
+    top: -25px;
+  }
+  .wrapper .tablet .tablet-baner-one::before {
+    width: 50px;
+    height: 50px;
+  }
+  .wrapper .tablet .tablet-baner-two::before {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media (min-width: 991.98px) {
+  header {
+    margin-bottom: 45px;
+  }
+  .wrapper .slogan p {
+    font-size: 55px;
+  }
+  .wrapper .tablet {
+    font-size: 24px;
+  }
+  .wrapper .tablet div[class|="tablet-baner"]::before {
+    top: -25px;
+  }
+  .wrapper .tablet .tablet-baner-one p {
+    left: 10px;
+    top: 40px;
+  }
+  .wrapper .tablet .tablet-baner-two p {
+    right: 45px;
+    bottom: 165px;
+  }
+  .wrapper .tablet .tablet-baner-one::before {
+    width: 69px;
+    height: 69px;
+  }
+  .wrapper .tablet .tablet-baner-two::before {
+    width: 64px;
+    height: 64px;
+  }
+}
+
+@media (min-width: 1199.98px) {
+  .wrapper .tablet .tablet-baner-one p {
+    left: 10px;
+    top: 45px;
+  }
+  .wrapper .tablet .tablet-baner-two p {
+    right: 55px;
+    bottom: 200px;
+  }
 }
