@@ -90,14 +90,6 @@ li a {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: block;
-  text-align: center;
-  text-transform: uppercase;
-  margin: 0 auto;
-  font-weight: 400;
-}
-
-.button p {
-  color: #ffffff;
 }
 
 header {
@@ -233,23 +225,6 @@ header .navbar-top li {
   position: relative;
 }
 
-.wrapper .mobile .first-carousel .owl-dots {
-  margin-top: 17px;
-  text-align: center;
-}
-
-.wrapper .mobile .first-carousel .owl-dots button {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #adafb3;
-  margin-right: 7px;
-}
-
-.wrapper .mobile .first-carousel .owl-dots .active {
-  background-color: #636363;
-}
-
 .wrapper .mobile .first-carousel div[class|="baner"] {
   margin-top: 44px;
   position: relative;
@@ -272,12 +247,14 @@ header .navbar-top li {
 
 .wrapper .mobile .first-carousel div[class|="baner"] .button {
   display: block;
+  text-align: center;
   margin: 0 auto;
 }
 
 .wrapper .mobile .first-carousel div[class|="baner"] .button p {
   padding-top: 14px;
   font-size: 16px;
+  color: #ffffff;
 }
 
 .baner-first::before, .tablet-baner-one::before {
@@ -308,19 +285,6 @@ header .navbar-top li {
   font-weight: bold;
 }
 
-.wrapper .tablet .tablet-baner-one {
-  background: url(../img/poster-1.png);
-  background-size: 100% 100%;
-  height: 470px;
-}
-
-.wrapper .tablet .tablet-baner-two {
-  background: url(../img/poster-2.png);
-  background-color: #1dd416;
-  background-size: 100% 100%;
-  height: 470px;
-}
-
 .wrapper .tablet div[class|="tablet-baner"] p {
   position: absolute;
 }
@@ -332,10 +296,13 @@ header .navbar-top li {
   right: 0;
   width: 200px;
   height: 40px;
+  margin: 0 auto;
+  color: #ffffff;
 }
 
 .wrapper .tablet div[class|="tablet-baner"] .button p {
   position: static;
+  text-align: center;
   margin: 15px 0;
 }
 
@@ -349,95 +316,9 @@ header .navbar-top li {
   bottom: 123px;
 }
 
-.baner-block {
-  margin-bottom: 50px;
-}
-
-.print-block {
-  text-align: center;
-  position: relative;
-  margin-bottom: 54px;
-}
-
-.print-block h2 {
-  font-size: 24px;
-  text-transform: uppercase;
-  color: #adafb3;
-  font-weight: bold;
-  margin: 0 0 27px;
-  text-align: left;
-}
-
-.print-block img {
-  margin-bottom: 19px;
-}
-
-.print-block p {
-  font-size: 16px;
-  color: #adafb3;
-  margin-bottom: 28px;
-  text-align: left;
-}
-
-.print-block .button {
-  background: #ff005d;
-  color: #ffffff;
-  display: inline-block;
-}
-
-.print-block .button p {
-  color: #ffffff;
-  margin-top: 13px;
-  text-align: center;
-}
-
-.catalog .slogan {
-  text-align: center;
-  font-size: 30px;
-  margin-bottom: 35px;
-}
-
-.catalog .catalog-card {
-  position: relative;
-  padding: 0 61px;
-  font-weight: 500;
-  text-transform: uppercase;
-}
-
-.catalog .catalog-card img {
-  margin-bottom: 18px;
-  -webkit-box-shadow: 0 4px 11px 0 gray;
-          box-shadow: 0 4px 11px 0 gray;
-}
-
-.catalog .catalog-card p {
-  line-height: 1.5rem;
-}
-
-.catalog .button p {
-  margin-top: 14px;
-}
-
-.catalog .catalog-card:nth-child(1) img::before {
-  content: "";
-  background: url(../img/top.png);
-  background-size: contain;
-  position: absolute;
-  left: 10px;
-  top: 0;
-  width: 69px;
-  height: 69px;
-}
-
 @media (min-width: 767.98px) {
   header {
     margin-bottom: 40px;
-  }
-  .baner-block {
-    margin-bottom: 106px;
-  }
-  .print-block {
-    margin-bottom: 106px;
   }
   .wrapper .slogan p {
     margin: 46px 0;
@@ -449,18 +330,9 @@ header .navbar-top li {
     width: 50px;
     height: 50px;
   }
-  .wrapper .tablet .tablet-baner-two {
-    text-align: end;
-  }
-  .wrapper .tablet .tablet-baner-two ::before {
+  .wrapper .tablet .tablet-baner-two::before {
     width: 45px;
     height: 45px;
-  }
-  .wrapper .print-block {
-    text-align: left;
-  }
-  .wrapper .print-block .button {
-    width: 200px;
   }
 }
 
@@ -476,10 +348,6 @@ header .navbar-top li {
   }
   .wrapper .tablet div[class|="tablet-baner"]::before {
     top: -25px;
-  }
-  .wrapper .tablet div[class|="tablet-baner"] .button p {
-    margin: 15px 0;
-    font-size: 16px;
   }
   .wrapper .tablet .tablet-baner-one p {
     left: 10px;
@@ -497,14 +365,6 @@ header .navbar-top li {
     width: 64px;
     height: 64px;
   }
-  .wrapper .print-block .content {
-    margin: 4rem 0 0;
-  }
-  .wrapper .print-block .button {
-    position: absolute;
-    left: 3rem;
-    bottom: 1rem;
-  }
 }
 
 @media (min-width: 1199.98px) {
@@ -515,8 +375,5 @@ header .navbar-top li {
   .wrapper .tablet .tablet-baner-two p {
     right: 55px;
     bottom: 200px;
-  }
-  .wrapper .print-block .content {
-    margin: 5rem 0 0;
   }
 }

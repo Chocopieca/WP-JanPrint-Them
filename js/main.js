@@ -8,5 +8,14 @@ $(".first-carousel").owlCarousel({
     items: 1,
     navText: "",
     autoplay: false,
-    
+})
+
+$(".second-carousel").owlCarousel({
+    loop: true,
+    margin: 10,
+    items: 1,
+    navText: "",
+    autoplay: false,
+    nav: true,
+    dots: false
 })
