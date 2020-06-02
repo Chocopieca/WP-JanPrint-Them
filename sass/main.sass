@@ -46,6 +46,33 @@ li
     font-weight: 400
     p
         color: $white-text
+h2,h3
+    font-size: 24px
+    text-transform: uppercase
+    color: $light-gray-text
+    font-weight: bold
+    text-align: left
+.slogan
+    font-family: "Nether"
+    font-size: 35px
+    display: flex
+    justify-content: center
+    text-align: end
+    color: $black-text
+    font-weight: 500
+.social
+    a
+        display: inline-block
+        width: 20px
+        height: 20px
+        background-image: url(../img/css_sprites.png)
+        margin: 0 6px
+    a:nth-child(1)
+        background-position: 30px -45px
+    a:nth-child(2)
+        background-position: -9px 29px
+    a:nth-child(3)
+        background-position: -59px 71px
 // header
 header
     margin-bottom: 30px
@@ -119,13 +146,6 @@ header
             margin: 0 15px
 // first-block
 .wrapper
-    .slogan
-        font-family: "Nether"
-        font-size: 35px
-        display: flex
-        justify-content: center
-        text-align: end
-        color: $black-text
     .baner-carousel.mobile-block
         color: $white-text
         text-transform: uppercase
@@ -227,12 +247,7 @@ header
     position: relative
     margin-bottom: 54px
     h2
-        font-size: 24px
-        text-transform: uppercase
-        color: $light-gray-text
-        font-weight: bold
         margin: 0 0 27px
-        text-align: left
     img
         margin-bottom: 19px
     p
@@ -250,6 +265,7 @@ header
             text-align: center
 // third-block
 .catalog-block
+    margin-bottom: 70px
     .slogan
         text-align: center
         font-size: 30px
@@ -310,14 +326,51 @@ header
                 top: 50%
                 &::before
                     transform: rotate(225deg)
-    .tablet-cotalog
-        padding: 0
-        img
-            box-shadow: 0 0 0 0 #ffffff
-        &:before
-            left: 10px
-            top: -30px        
-
+.tablet-cotalog
+    padding: 0
+    img
+        box-shadow: 0 0 0 0 #ffffff
+    &:before
+        left: 10px
+        top: -30px
+// fourth block
+.form-block
+    margin-bottom: 55px
+    h3
+        font-size: 18px
+        margin-bottom: 28px
+    img
+        margin-bottom: 32px
+    form
+        input
+            margin-bottom: 18px
+            border-radius: 100px
+            border: 1px solid gray
+            height: 40px
+            padding-left: 19px
+            opacity: 0.6
+        input[type="submit"]
+            background: $pink-button
+            color: $white-text
+            text-transform: uppercase
+            opacity: 1
+// footer
+footer
+    .slogan
+        text-transform: none
+        font-size: 30px
+        margin-bottom: 15px
+    .links-block
+        text-transform: uppercase
+        text-align: center
+        a,p
+            display: block
+            margin-bottom: 15px
+        p
+            color: $light-gray-text
+        .social
+            a
+                display: inline-block
 // Extra small devices (portrait phones, less than 576px)
 @media (min-width: 575.98px)
     body
@@ -360,13 +413,23 @@ header
                     p
                         padding-top: 14px
             .catalog-card
-                text-transform: uppercase
                 text-align: center
+                padding: 0
                 img
                     margin-bottom: 16px
                 p
                     line-height: 1.5rem
                     text-align: left
+    footer
+        .help
+            text-align: left
+        .currency
+            text-align: right
+        .social
+            text-align: center
+        .tablet
+            text-transform: uppercase
+            color: $light-gray-text
 
 // Medium devices (tablets, less than 992px)
 @media (min-width: 991.98px)
@@ -411,7 +474,9 @@ header
                 padding-top: 7rem
                 .slogan
                     font-size: 54px
-
+        .form-block
+            h3
+                font-size: 24px
 
 // Large devices (desktops, less than 1200px)
 @media (min-width: 1199.98px)

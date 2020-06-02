@@ -100,6 +100,48 @@ li a {
   color: #ffffff;
 }
 
+h2, h3 {
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #adafb3;
+  font-weight: bold;
+  text-align: left;
+}
+
+.slogan {
+  font-family: "Nether";
+  font-size: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: end;
+  color: #090b0c;
+  font-weight: 500;
+}
+
+.social a {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url(../img/css_sprites.png);
+  margin: 0 6px;
+}
+
+.social a:nth-child(1) {
+  background-position: 30px -45px;
+}
+
+.social a:nth-child(2) {
+  background-position: -9px 29px;
+}
+
+.social a:nth-child(3) {
+  background-position: -59px 71px;
+}
+
 header {
   margin-bottom: 30px;
 }
@@ -209,19 +251,6 @@ header .navbar-top {
 header .navbar-top li {
   display: inline-block;
   margin: 0 15px;
-}
-
-.wrapper .slogan {
-  font-family: "Nether";
-  font-size: 35px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: end;
-  color: #090b0c;
 }
 
 .wrapper .baner-carousel.mobile-block {
@@ -367,12 +396,7 @@ header .navbar-top li {
 }
 
 .print-block h2 {
-  font-size: 24px;
-  text-transform: uppercase;
-  color: #adafb3;
-  font-weight: bold;
   margin: 0 0 27px;
-  text-align: left;
 }
 
 .print-block img {
@@ -396,6 +420,10 @@ header .navbar-top li {
   color: #ffffff;
   margin-top: 13px;
   text-align: center;
+}
+
+.catalog-block {
+  margin-bottom: 70px;
 }
 
 .catalog-block .slogan {
@@ -490,18 +518,71 @@ header .navbar-top li {
           transform: rotate(225deg);
 }
 
-.catalog-block .tablet-cotalog {
+.tablet-cotalog {
   padding: 0;
 }
 
-.catalog-block .tablet-cotalog img {
+.tablet-cotalog img {
   -webkit-box-shadow: 0 0 0 0 #ffffff;
           box-shadow: 0 0 0 0 #ffffff;
 }
 
-.catalog-block .tablet-cotalog:before {
+.tablet-cotalog:before {
   left: 10px;
   top: -30px;
+}
+
+.form-block {
+  margin-bottom: 55px;
+}
+
+.form-block h3 {
+  font-size: 18px;
+  margin-bottom: 28px;
+}
+
+.form-block img {
+  margin-bottom: 32px;
+}
+
+.form-block form input {
+  margin-bottom: 18px;
+  border-radius: 100px;
+  border: 1px solid gray;
+  height: 40px;
+  padding-left: 19px;
+  opacity: 0.6;
+}
+
+.form-block form input[type="submit"] {
+  background: #ff005d;
+  color: #ffffff;
+  text-transform: uppercase;
+  opacity: 1;
+}
+
+footer .slogan {
+  text-transform: none;
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+footer .links-block {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+footer .links-block a, footer .links-block p {
+  display: block;
+  margin-bottom: 15px;
+}
+
+footer .links-block p {
+  color: #adafb3;
+}
+
+footer .links-block .social a {
+  display: inline-block;
 }
 
 @media (min-width: 767.98px) {
@@ -550,8 +631,8 @@ header .navbar-top li {
     padding-top: 14px;
   }
   .wrapper .catalog-block .catalog-card {
-    text-transform: uppercase;
     text-align: center;
+    padding: 0;
   }
   .wrapper .catalog-block .catalog-card img {
     margin-bottom: 16px;
@@ -559,6 +640,19 @@ header .navbar-top li {
   .wrapper .catalog-block .catalog-card p {
     line-height: 1.5rem;
     text-align: left;
+  }
+  footer .help {
+    text-align: left;
+  }
+  footer .currency {
+    text-align: right;
+  }
+  footer .social {
+    text-align: center;
+  }
+  footer .tablet {
+    text-transform: uppercase;
+    color: #adafb3;
   }
 }
 
@@ -608,6 +702,9 @@ header .navbar-top li {
   }
   .wrapper .catalog-block .catalog-way .slogan {
     font-size: 54px;
+  }
+  .wrapper .form-block h3 {
+    font-size: 24px;
   }
 }
 
