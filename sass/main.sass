@@ -125,7 +125,8 @@ header
         display: flex
         justify-content: center
         text-align: end
-    .mobile
+        color: $black-text
+    .baner-carousel.mobile-block
         color: $white-text
         text-transform: uppercase
         font-weight: bold
@@ -184,19 +185,19 @@ header
         width: 64px
         height: 64px
 .wrapper
-    .tablet
+    .tablet-baner
         text-transform: uppercase
         color: $white-text
         font-weight: bold
+        div[class|="tablet-baner"]
+            background-size: 100% 100%
+            height: 320px
+            @media ( min-width: 992px )
+                height: 470px
         .tablet-baner-one
             background: url(../img/poster-1.png)
-            background-size: 100% 100%
-            height: 470px
         .tablet-baner-two
             background: url(../img/poster-2.png)
-            background-color: #1dd416
-            background-size: 100% 100%
-            height: 470px
         div[class|="tablet-baner"]
             p
                 position: absolute
@@ -218,7 +219,7 @@ header
             p
                 right: 32px
                 bottom: 123px
-.baner-block
+.baner
     margin-bottom:  50px
 // second-block
 .print-block
@@ -248,7 +249,7 @@ header
             margin-top: 13px
             text-align: center
 // third-block
-.catalog
+.catalog-block
     .slogan
         text-align: center
         font-size: 30px
@@ -258,27 +259,64 @@ header
         padding: 0 61px
         font-weight: 500
         text-transform: uppercase
+        color: $dark-gray-text
         img
             margin-bottom: 18px
             box-shadow: 0 4px 11px 0 gray
         p
             line-height: 1.5rem
-    .button
-        p
-            margin-top: 14px
-    .catalog-card:nth-child(1)
-        img::before
+        &:before
             content: ""
-            background: url(../img/top.png)
             background-size: contain
             position: absolute
-            left: 10px
+            left: 30px
             top: 0
             width: 69px
             height: 69px
-
-            
-
+    .button
+        p
+            margin-top: 14px
+    .catalog-card.card-1:before
+        background-image: url(../img/top.png)
+    .catalog-card.card-2:before
+        background-image: none
+    .second-carousel
+        margin-bottom: 26px
+        .owl-nav
+            button
+                width: 28px
+                height: 28px
+                position: absolute
+                border-radius: 50%
+                background: #ebebeb
+                &::before
+                    content: ""
+                    position: absolute
+                    display: inline-block
+                    width: 10px
+                    height: 10px
+                    border-left: 3px solid #888888
+                    border-bottom: 3px solid #888888
+                    transform: rotate(45deg)
+                    left: 10px
+                    top: 10px
+            .owl-prev
+                left: 15px
+                top: 50%
+                &::before
+                    transform: rotate(45deg)
+            .owl-next
+                right: 15px
+                top: 50%
+                &::before
+                    transform: rotate(225deg)
+    .tablet-cotalog
+        padding: 0
+        img
+            box-shadow: 0 0 0 0 #ffffff
+        &:before
+            left: 10px
+            top: -30px        
 
 // Extra small devices (portrait phones, less than 576px)
 @media (min-width: 575.98px)
@@ -288,7 +326,7 @@ header
 @media (min-width: 767.98px)
     header
         margin-bottom: 40px
-    .baner-block
+    .baner
         margin-bottom:  106px
     .print-block
         margin-bottom: 106px
@@ -296,7 +334,7 @@ header
         .slogan
             p
                 margin: 46px 0
-        .tablet
+        .tablet-baner
             div[class|="tablet-baner"]
                 &::before
                     top: -25px
@@ -312,6 +350,24 @@ header
             text-align: left
             .button
                 width: 200px
+        .catalog-block
+            .catalog-way
+                padding-top: 4rem
+                .slogan
+                    padding-bottom: 2rem
+                .button
+                    width: 200px
+                    p
+                        padding-top: 14px
+            .catalog-card
+                text-transform: uppercase
+                text-align: center
+                img
+                    margin-bottom: 16px
+                p
+                    line-height: 1.5rem
+                    text-align: left
+
 // Medium devices (tablets, less than 992px)
 @media (min-width: 991.98px)
     header
@@ -320,7 +376,7 @@ header
         .slogan
             p
                 font-size: 55px
-        .tablet
+        .tablet-baner
             font-size: 24px
             div[class|="tablet-baner"]
                 &::before
@@ -350,11 +406,17 @@ header
                 position: absolute
                 left: 3rem
                 bottom: 1rem
+        .catalog-block
+            .catalog-way
+                padding-top: 7rem
+                .slogan
+                    font-size: 54px
+
 
 // Large devices (desktops, less than 1200px)
 @media (min-width: 1199.98px)
     .wrapper
-        .tablet
+        .tablet-baner
             .tablet-baner-one
                 p
                     left: 10px

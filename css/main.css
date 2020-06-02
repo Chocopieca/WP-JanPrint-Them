@@ -221,24 +221,25 @@ header .navbar-top li {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: end;
+  color: #090b0c;
 }
 
-.wrapper .mobile {
+.wrapper .baner-carousel.mobile-block {
   color: #ffffff;
   text-transform: uppercase;
   font-weight: bold;
 }
 
-.wrapper .mobile .first-carousel {
+.wrapper .baner-carousel.mobile-block .first-carousel {
   position: relative;
 }
 
-.wrapper .mobile .first-carousel .owl-dots {
+.wrapper .baner-carousel.mobile-block .first-carousel .owl-dots {
   margin-top: 17px;
   text-align: center;
 }
 
-.wrapper .mobile .first-carousel .owl-dots button {
+.wrapper .baner-carousel.mobile-block .first-carousel .owl-dots button {
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -246,36 +247,36 @@ header .navbar-top li {
   margin-right: 7px;
 }
 
-.wrapper .mobile .first-carousel .owl-dots .active {
+.wrapper .baner-carousel.mobile-block .first-carousel .owl-dots .active {
   background-color: #636363;
 }
 
-.wrapper .mobile .first-carousel div[class|="baner"] {
+.wrapper .baner-carousel.mobile-block .first-carousel div[class|="baner"] {
   margin-top: 44px;
   position: relative;
   text-transform: uppercase;
   font-weight: bold;
 }
 
-.wrapper .mobile .first-carousel div[class|="baner"] .hidden {
+.wrapper .baner-carousel.mobile-block .first-carousel div[class|="baner"] .hidden {
   display: block;
   height: 233px;
   margin-bottom: 19px;
 }
 
-.wrapper .mobile .first-carousel div[class|="baner"] .hidden p {
+.wrapper .baner-carousel.mobile-block .first-carousel div[class|="baner"] .hidden p {
   position: absolute;
   left: 20px;
   top: 40px;
   font-size: 20px;
 }
 
-.wrapper .mobile .first-carousel div[class|="baner"] .button {
+.wrapper .baner-carousel.mobile-block .first-carousel div[class|="baner"] .button {
   display: block;
   margin: 0 auto;
 }
 
-.wrapper .mobile .first-carousel div[class|="baner"] .button p {
+.wrapper .baner-carousel.mobile-block .first-carousel div[class|="baner"] .button p {
   padding-top: 14px;
   font-size: 16px;
 }
@@ -302,30 +303,36 @@ header .navbar-top li {
   height: 64px;
 }
 
-.wrapper .tablet {
+.wrapper .tablet-baner {
   text-transform: uppercase;
   color: #ffffff;
   font-weight: bold;
 }
 
-.wrapper .tablet .tablet-baner-one {
+.wrapper .tablet-baner div[class|="tablet-baner"] {
+  background-size: 100% 100%;
+  height: 320px;
+}
+
+@media (min-width: 992px) {
+  .wrapper .tablet-baner div[class|="tablet-baner"] {
+    height: 470px;
+  }
+}
+
+.wrapper .tablet-baner .tablet-baner-one {
   background: url(../img/poster-1.png);
-  background-size: 100% 100%;
-  height: 470px;
 }
 
-.wrapper .tablet .tablet-baner-two {
+.wrapper .tablet-baner .tablet-baner-two {
   background: url(../img/poster-2.png);
-  background-color: #1dd416;
-  background-size: 100% 100%;
-  height: 470px;
 }
 
-.wrapper .tablet div[class|="tablet-baner"] p {
+.wrapper .tablet-baner div[class|="tablet-baner"] p {
   position: absolute;
 }
 
-.wrapper .tablet div[class|="tablet-baner"] .button {
+.wrapper .tablet-baner div[class|="tablet-baner"] .button {
   position: absolute;
   bottom: 20px;
   left: 0;
@@ -334,22 +341,22 @@ header .navbar-top li {
   height: 40px;
 }
 
-.wrapper .tablet div[class|="tablet-baner"] .button p {
+.wrapper .tablet-baner div[class|="tablet-baner"] .button p {
   position: static;
   margin: 15px 0;
 }
 
-.wrapper .tablet .tablet-baner-one p {
+.wrapper .tablet-baner .tablet-baner-one p {
   left: 10px;
   top: 30px;
 }
 
-.wrapper .tablet .tablet-baner-two p {
+.wrapper .tablet-baner .tablet-baner-two p {
   right: 32px;
   bottom: 123px;
 }
 
-.baner-block {
+.baner {
   margin-bottom: 50px;
 }
 
@@ -391,49 +398,117 @@ header .navbar-top li {
   text-align: center;
 }
 
-.catalog .slogan {
+.catalog-block .slogan {
   text-align: center;
   font-size: 30px;
   margin-bottom: 35px;
 }
 
-.catalog .catalog-card {
+.catalog-block .catalog-card {
   position: relative;
   padding: 0 61px;
   font-weight: 500;
   text-transform: uppercase;
+  color: #636363;
 }
 
-.catalog .catalog-card img {
+.catalog-block .catalog-card img {
   margin-bottom: 18px;
   -webkit-box-shadow: 0 4px 11px 0 gray;
           box-shadow: 0 4px 11px 0 gray;
 }
 
-.catalog .catalog-card p {
+.catalog-block .catalog-card p {
   line-height: 1.5rem;
 }
 
-.catalog .button p {
-  margin-top: 14px;
-}
-
-.catalog .catalog-card:nth-child(1) img::before {
+.catalog-block .catalog-card:before {
   content: "";
-  background: url(../img/top.png);
   background-size: contain;
   position: absolute;
-  left: 10px;
+  left: 30px;
   top: 0;
   width: 69px;
   height: 69px;
+}
+
+.catalog-block .button p {
+  margin-top: 14px;
+}
+
+.catalog-block .catalog-card.card-1:before {
+  background-image: url(../img/top.png);
+}
+
+.catalog-block .catalog-card.card-2:before {
+  background-image: none;
+}
+
+.catalog-block .second-carousel {
+  margin-bottom: 26px;
+}
+
+.catalog-block .second-carousel .owl-nav button {
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  border-radius: 50%;
+  background: #ebebeb;
+}
+
+.catalog-block .second-carousel .owl-nav button::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-left: 3px solid #888888;
+  border-bottom: 3px solid #888888;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  left: 10px;
+  top: 10px;
+}
+
+.catalog-block .second-carousel .owl-nav .owl-prev {
+  left: 15px;
+  top: 50%;
+}
+
+.catalog-block .second-carousel .owl-nav .owl-prev::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.catalog-block .second-carousel .owl-nav .owl-next {
+  right: 15px;
+  top: 50%;
+}
+
+.catalog-block .second-carousel .owl-nav .owl-next::before {
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+}
+
+.catalog-block .tablet-cotalog {
+  padding: 0;
+}
+
+.catalog-block .tablet-cotalog img {
+  -webkit-box-shadow: 0 0 0 0 #ffffff;
+          box-shadow: 0 0 0 0 #ffffff;
+}
+
+.catalog-block .tablet-cotalog:before {
+  left: 10px;
+  top: -30px;
 }
 
 @media (min-width: 767.98px) {
   header {
     margin-bottom: 40px;
   }
-  .baner-block {
+  .baner {
     margin-bottom: 106px;
   }
   .print-block {
@@ -442,17 +517,17 @@ header .navbar-top li {
   .wrapper .slogan p {
     margin: 46px 0;
   }
-  .wrapper .tablet div[class|="tablet-baner"]::before {
+  .wrapper .tablet-baner div[class|="tablet-baner"]::before {
     top: -25px;
   }
-  .wrapper .tablet .tablet-baner-one::before {
+  .wrapper .tablet-baner .tablet-baner-one::before {
     width: 50px;
     height: 50px;
   }
-  .wrapper .tablet .tablet-baner-two {
+  .wrapper .tablet-baner .tablet-baner-two {
     text-align: end;
   }
-  .wrapper .tablet .tablet-baner-two ::before {
+  .wrapper .tablet-baner .tablet-baner-two ::before {
     width: 45px;
     height: 45px;
   }
@@ -461,6 +536,29 @@ header .navbar-top li {
   }
   .wrapper .print-block .button {
     width: 200px;
+  }
+  .wrapper .catalog-block .catalog-way {
+    padding-top: 4rem;
+  }
+  .wrapper .catalog-block .catalog-way .slogan {
+    padding-bottom: 2rem;
+  }
+  .wrapper .catalog-block .catalog-way .button {
+    width: 200px;
+  }
+  .wrapper .catalog-block .catalog-way .button p {
+    padding-top: 14px;
+  }
+  .wrapper .catalog-block .catalog-card {
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .wrapper .catalog-block .catalog-card img {
+    margin-bottom: 16px;
+  }
+  .wrapper .catalog-block .catalog-card p {
+    line-height: 1.5rem;
+    text-align: left;
   }
 }
 
@@ -471,29 +569,29 @@ header .navbar-top li {
   .wrapper .slogan p {
     font-size: 55px;
   }
-  .wrapper .tablet {
+  .wrapper .tablet-baner {
     font-size: 24px;
   }
-  .wrapper .tablet div[class|="tablet-baner"]::before {
+  .wrapper .tablet-baner div[class|="tablet-baner"]::before {
     top: -25px;
   }
-  .wrapper .tablet div[class|="tablet-baner"] .button p {
+  .wrapper .tablet-baner div[class|="tablet-baner"] .button p {
     margin: 15px 0;
     font-size: 16px;
   }
-  .wrapper .tablet .tablet-baner-one p {
+  .wrapper .tablet-baner .tablet-baner-one p {
     left: 10px;
     top: 40px;
   }
-  .wrapper .tablet .tablet-baner-two p {
+  .wrapper .tablet-baner .tablet-baner-two p {
     right: 45px;
     bottom: 165px;
   }
-  .wrapper .tablet .tablet-baner-one::before {
+  .wrapper .tablet-baner .tablet-baner-one::before {
     width: 69px;
     height: 69px;
   }
-  .wrapper .tablet .tablet-baner-two::before {
+  .wrapper .tablet-baner .tablet-baner-two::before {
     width: 64px;
     height: 64px;
   }
@@ -505,14 +603,20 @@ header .navbar-top li {
     left: 3rem;
     bottom: 1rem;
   }
+  .wrapper .catalog-block .catalog-way {
+    padding-top: 7rem;
+  }
+  .wrapper .catalog-block .catalog-way .slogan {
+    font-size: 54px;
+  }
 }
 
 @media (min-width: 1199.98px) {
-  .wrapper .tablet .tablet-baner-one p {
+  .wrapper .tablet-baner .tablet-baner-one p {
     left: 10px;
     top: 45px;
   }
-  .wrapper .tablet .tablet-baner-two p {
+  .wrapper .tablet-baner .tablet-baner-two p {
     right: 55px;
     bottom: 200px;
   }
