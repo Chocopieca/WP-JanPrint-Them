@@ -1,5 +1,5 @@
 * {
-  outline: 1px solid green;
+  outline: 0px solid green;
 }
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -100,12 +100,13 @@ li a {
   color: #ffffff;
 }
 
-h2, h3 {
+title {
   font-size: 24px;
   text-transform: uppercase;
   color: #adafb3;
   font-weight: bold;
   text-align: left;
+  display: block;
 }
 
 .slogan {
@@ -142,8 +143,8 @@ h2, h3 {
   background-position: -59px 71px;
 }
 
-header {
-  margin-bottom: 30px;
+.container {
+  margin-bottom: 50px;
 }
 
 header .logo {
@@ -392,15 +393,14 @@ header .navbar-top li {
 .print-block {
   text-align: center;
   position: relative;
-  margin-bottom: 54px;
 }
 
-.print-block h2 {
+.print-block title {
   margin: 0 0 27px;
 }
 
 .print-block img {
-  margin-bottom: 19px;
+  margin-bottom: 19pxs;
 }
 
 .print-block p {
@@ -420,10 +420,6 @@ header .navbar-top li {
   color: #ffffff;
   margin-top: 13px;
   text-align: center;
-}
-
-.catalog-block {
-  margin-bottom: 70px;
 }
 
 .catalog-block .slogan {
@@ -532,11 +528,7 @@ header .navbar-top li {
   top: -30px;
 }
 
-.form-block {
-  margin-bottom: 55px;
-}
-
-.form-block h3 {
+.form-block title {
   font-size: 18px;
   margin-bottom: 28px;
 }
@@ -559,6 +551,84 @@ header .navbar-top li {
   color: #ffffff;
   text-transform: uppercase;
   opacity: 1;
+  margin-bottom: 0;
+}
+
+.reviews-block .owl-dots {
+  text-align: center;
+}
+
+.reviews-block .owl-dots button {
+  width: 10px;
+  height: 10px;
+  background-color: #adafb3;
+  border-radius: 50%;
+  margin: 0 1%;
+}
+
+.reviews-block .owl-dots .active {
+  background-color: #636363;
+}
+
+.reviews-block title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.reviews-block .portrait {
+  display: block;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background-image: url(../img/reviews-face.jpg);
+  background-position: 40% 10%;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.reviews-block .portrait:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 17px;
+  height: 17px;
+  background-image: url(../img/twitter-color.png);
+}
+
+.reviews-block .reviews-data {
+  display: inline-block;
+  text-align: left;
+  line-height: 1rem;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.reviews-block .reviews-data time {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.reviews-block .review {
+  margin: 15px 10px;
+  padding: 15px 15px;
+  border-radius: 10px 10px;
+  -webkit-box-shadow: 0 0 5px 0 gray;
+          box-shadow: 0 0 5px 0 gray;
+}
+
+.reviews-block .review p {
+  margin-bottom: 25px;
+}
+
+.reviews-block .review .stars {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background-image: url(../img/5-stars.png);
+  background-position-x: 50%;
+  background-repeat: no-repeat;
 }
 
 footer .slogan {
@@ -586,6 +656,9 @@ footer .links-block .social a {
 }
 
 @media (min-width: 767.98px) {
+  .container {
+    margin-bottom: 150px;
+  }
   header {
     margin-bottom: 40px;
   }
@@ -640,6 +713,9 @@ footer .links-block .social a {
   .wrapper .catalog-block .catalog-card p {
     line-height: 1.5rem;
     text-align: left;
+  }
+  footer .slogan {
+    font-size: 2rem;
   }
   footer .help {
     text-align: left;
@@ -703,8 +779,11 @@ footer .links-block .social a {
   .wrapper .catalog-block .catalog-way .slogan {
     font-size: 54px;
   }
-  .wrapper .form-block h3 {
+  .wrapper .form-block title {
     font-size: 24px;
+  }
+  footer .slogan {
+    font-size: 3rem;
   }
 }
 

@@ -19,3 +19,13 @@ $(".second-carousel").owlCarousel({
     nav: true,
     dots: false
 })
+
+$(".third-carousel").owlCarousel({
+    loop: true,
+    margin: 10,
+    items: 1,
+    navText: "",
+    autoplay: false,
+    nav: false,
+    dots: true
+})
