@@ -27,5 +27,11 @@ $(".third-carousel").owlCarousel({
     navText: "",
     autoplay: false,
     nav: false,
-    dots: true
+    dots: true,
+    responsive: {
+        768:{
+            dots: false,
+            nav: true
+        }
+    }
 })

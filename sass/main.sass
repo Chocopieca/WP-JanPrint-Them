@@ -15,6 +15,7 @@ body
     color: $dark-gray-text
     background: $bg-color
     padding: 19px 15px
+    font-weight: 400
 img
     max-width: 100%
     height: auto
@@ -53,6 +54,9 @@ title
     font-weight: bold
     text-align: left
     display: block
+    margin-bottom: 30px
+    @media ( max-width: 768px )
+        margin-bottom: 50px        
 .slogan
     font-family: "Nether"
     font-size: 35px
@@ -147,7 +151,7 @@ header
         li
             display: inline-block
             margin: 0 15px
-// first-block
+// baner-block
 .wrapper
     .baner-carousel.mobile-block
         color: $white-text
@@ -244,12 +248,10 @@ header
                 bottom: 123px
 .baner
     margin-bottom:  50px
-// second-block
+// print-block
 .print-block
     text-align: center
     position: relative
-    title
-        margin: 0 0 27px
     img
         margin-bottom: 19pxs
     p
@@ -260,12 +262,12 @@ header
     .button
         background: $pink-button
         color: $white-text
-        display: inline-block
+        margin: 0 15px
+        padding: 14px
         p
             color: $white-text
-            margin-top: 13px
             text-align: center
-// third-block
+// catalog-block
 .catalog-block
     .slogan
         text-align: center
@@ -319,12 +321,12 @@ header
                     top: 10px
             .owl-prev
                 left: 15px
-                top: 50%
+                top: 40%
                 &::before
                     transform: rotate(45deg)
             .owl-next
                 right: 15px
-                top: 50%
+                top: 40%
                 &::before
                     transform: rotate(225deg)
 .tablet-cotalog
@@ -334,11 +336,25 @@ header
     &:before
         left: 10px
         top: -30px
-// fourth block
+// business-card
+.business-card-block
+    img
+        margin-bottom: 32px
+    p
+        margin-bottom: 33px
+        color: $light-gray-text
+    .button
+        padding-top: 14px
+        background-color: $pink-button
+        margin: 0 15px
+        @media ( max-width: 768px)
+            width: 200px
+        p
+            color: $white-text
+// form-block
 .form-block
     title
         font-size: 18px
-        margin-bottom: 28px
     img
         margin-bottom: 32px
     form
@@ -369,9 +385,8 @@ header
             background-color: $dark-gray-text
     title
         text-align: center
-        margin-bottom: 60px
     .portrait
-        display: block
+        display: inline-block
         width: 65px
         height: 65px
         border-radius: 50%
@@ -390,27 +405,58 @@ header
     .reviews-data
         display: inline-block
         text-align: left
-        line-height: 1rem
+        line-height: 1.4rem
         font-size: 16px
         font-weight: 400
+        margin-bottom: 20px
         time
             font-size: 14px
             font-weight: 300
     .review
-        margin: 15px 10px
-        padding: 15px 15px
-        border-radius: 10px 10px
-        box-shadow: 0 0 5px 0 gray
+        margin: 10px 10px
+        padding: 40px
+        border-radius: 40px 40px
+        box-shadow: 0 0 20px 0 hsla(0, 0%, 0%, 0.07)
+        min-height: 200px
+        display: flex
+        flex-flow: column
+        justify-content: space-between
         p
             margin-bottom: 25px
         .stars
             display: inline-block
             width: 100%
-            height: 100%
-            margin: 0 auto
+            height: 20px
             background-image: url(../img/5-stars.png)
             background-position-x: 50%
             background-repeat: no-repeat
+    .third-carousel        
+        .owl-nav
+            button
+                width: 27px
+                height: 27px
+                position: absolute
+                border: 1px solid gray
+                border-radius: 50%
+                top: 40%
+                &::before
+                    content: ""
+                    display: inline-block
+                    width: 8px
+                    height: 8px
+                    border-left: 1px solid #000000
+                    border-top: 1px solid #000000
+                    transform: rotate(-45deg)
+                    margin-left: 3px
+                    left: 1px
+                &:first-child
+                    left: -10%
+                &:last-child
+                    right: -10%
+                    &::before
+                        transform: rotate(135deg)
+                        margin-left: 0
+                        margin-right: 3px
 // footer
 footer
     .slogan
@@ -438,10 +484,8 @@ footer
         margin-bottom: 150px
     header
         margin-bottom: 40px
-    .baner
-        margin-bottom:  106px
-    .print-block
-        margin-bottom: 106px
+        .container
+            margin-bottom: 45px
     .wrapper
         .slogan
             p
@@ -480,6 +524,8 @@ footer
                     line-height: 1.5rem
                     text-align: left
     footer
+        .container
+            margin-bottom: 30px
         .slogan
             font-size: 2rem
         .help
@@ -488,9 +534,18 @@ footer
             text-align: right
         .social
             text-align: center
+            padding-bottom: 30px
         .tablet
             text-transform: uppercase
             color: $light-gray-text
+        .payment
+            display: inline-block
+            width: 100%
+            height: 35px
+            background-image: url(../img/payment.jpg)
+            background-repeat: no-repeat
+            background-position-x: 50%
+            
 
 // Medium devices (tablets, less than 992px)
 @media (min-width: 991.98px)
