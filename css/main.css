@@ -44,6 +44,7 @@ table {
 
 html {
   font-size: 14px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -155,11 +156,7 @@ title {
   margin-bottom: 50px;
 }
 
-header .logo {
-  margin-right: 15px;
-}
-
-header .navbar {
+.navbar {
   -webkit-transition: all 0s ease;
   transition: all 0s ease;
   text-transform: uppercase;
@@ -181,36 +178,44 @@ header .navbar {
   right: 0;
   top: 0;
   background: #ffffff;
-  padding-top: 135px;
+  padding: 135px 0 30px;
   z-index: 50;
 }
 
-header .navbar ul li {
+.navbar ul li {
   margin-top: 37px;
 }
 
-header .navbar .social-links {
+.navbar .social-links {
   margin-top: 107px;
   margin-bottom: 35px;
 }
 
-header .navbar .social-links a {
+.navbar .social-links a {
   display: inline-block;
   width: 20px;
   height: 20px;
   background-image: url(../img/css_sprites.png);
 }
 
-header .navbar .social-links .twitter {
+.navbar .social-links .twitter {
   background-position: 30px -46px;
 }
 
-header .navbar .social-links .facebook {
+.navbar .social-links .facebook {
   background-position: -10px 28px;
 }
 
-header .navbar .social-links .instagram {
+.navbar .social-links .instagram {
   background-position: -60px -51px;
+}
+
+.show + header + .wrapper {
+  position: fixed;
+}
+
+header .logo {
+  margin-right: 15px;
 }
 
 header .show + a + .nav-right-block button {
@@ -406,8 +411,13 @@ header .navbar-top li {
 .print-block .button {
   background: #ff005d;
   color: #ffffff;
-  margin: 0 15px;
   padding: 14px;
+}
+
+@media (max-width: 798) {
+  .print-block .button {
+    margin: 0 15px;
+  }
 }
 
 .print-block .button p {
@@ -533,12 +543,12 @@ header .navbar-top li {
 .business-card-block .button {
   padding-top: 14px;
   background-color: #ff005d;
-  margin: 0 15px;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .business-card-block .button {
     width: 200px;
+    margin: 0 15px;
   }
 }
 
@@ -819,7 +829,7 @@ footer .links-block .social a {
     top: -25px;
   }
   .wrapper .tablet-baner div[class|="tablet-baner"] .button p {
-    margin: 15px 0;
+    margin: 14px 0;
     font-size: 16px;
   }
   .wrapper .tablet-baner .tablet-baner-one p {

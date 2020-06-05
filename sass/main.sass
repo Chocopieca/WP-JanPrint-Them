@@ -10,6 +10,7 @@
 // global
 html
     font-size: 14px
+    scroll-behavior: smooth
 body
     font-family: "roboto", sans-serif
     color: $dark-gray-text
@@ -80,45 +81,47 @@ title
         background-position: -59px 71px
 .container
     margin-bottom: 50px
+// navbar
+.navbar
+    transition: all 0s ease
+    text-transform: uppercase
+    font-size: 18px
+    font-weight: lighter
+    text-align: center
+    display: flex
+    justify-content: center
+    flex-flow: column
+    position: absolute
+    left: 0
+    right: 0
+    top: 0
+    background: $bg-color
+    padding: 135px 0 30px
+    z-index: 50
+    ul
+        li
+            margin-top: 37px
+    .social-links
+        margin-top: 107px
+        margin-bottom: 35px
+        a
+            display: inline-block
+            width: 20px
+            height: 20px
+            background-image: url(../img/css_sprites.png)
+        .twitter
+            background-position: 30px -46px
+        .facebook
+            background-position: -10px 28px
+        .instagram
+            background-position: -60px -51px
+.show + header + .wrapper
+        position: fixed
 // header
 header
     // margin-bottom: 30px
     .logo
         margin-right: 15px
-    .navbar
-        transition: all 0s ease
-        text-transform: uppercase
-        font-size: 18px
-        font-weight: lighter
-        text-align: center
-        display: flex
-        justify-content: center
-        flex-flow: column
-        position: absolute
-        left: 0
-        right: 0
-        top: 0
-        background: $bg-color
-        padding-top: 135px
-        z-index: 50
-        ul
-            li
-                margin-top: 37px
-        .social-links
-            margin-top: 107px
-            margin-bottom: 35px
-            a
-                display: inline-block
-                width: 20px
-                height: 20px
-                background-image: url(../img/css_sprites.png)
-            .twitter
-                background-position: 30px -46px
-            .facebook
-                background-position: -10px 28px
-            .instagram
-                background-position: -60px -51px
-
     .show + a + .nav-right-block
         button
             background-position: -6px -52px
@@ -262,8 +265,9 @@ header
     .button
         background: $pink-button
         color: $white-text
-        margin: 0 15px
         padding: 14px
+        @media ( max-width: 798 )
+            margin: 0 15px
         p
             color: $white-text
             text-align: center
@@ -346,9 +350,9 @@ header
     .button
         padding-top: 14px
         background-color: $pink-button
-        margin: 0 15px
-        @media ( max-width: 768px)
+        @media ( min-width: 768px)
             width: 200px
+            margin: 0 15px
         p
             color: $white-text
 // form-block
@@ -562,7 +566,7 @@ footer
                     top: -25px
                 .button
                     p
-                        margin: 15px 0
+                        margin: 14px 0
                         font-size: 16px
             .tablet-baner-one
                 p
