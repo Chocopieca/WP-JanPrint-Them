@@ -37,6 +37,142 @@ table {
   border-spacing: 0;
 }
 
+.container.catalog-filters {
+  margin-bottom: 20px;
+}
+
+.container.catalog-filters .bradcrumb li:first-child {
+  text-decoration: underline;
+}
+
+.container.catalog-filters .bradcrumb .breadcrumb-item {
+  display: inline-block;
+  margin-bottom: 32px;
+}
+
+.container.catalog-filters .slogan {
+  font-size: 45px;
+  margin-bottom: 42px;
+}
+
+.container.catalog-filters .catalog-carousel .new-category {
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 10px 0px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.container.catalog-filters .catalog-carousel .owl-nav button {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  border: 1px solid gray;
+  border-radius: 50%;
+  top: 10%;
+}
+
+.container.catalog-filters .catalog-carousel .owl-nav button::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-left: 1px solid #000000;
+  border-top: 1px solid #000000;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  margin-left: 3px;
+  left: 1px;
+}
+
+.container.catalog-filters .catalog-carousel .owl-nav button:first-child {
+  left: -10%;
+}
+
+.container.catalog-filters .catalog-carousel .owl-nav button:last-child {
+  right: -10%;
+}
+
+.container.catalog-filters .catalog-carousel .owl-nav button:last-child::before {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  margin-left: 0;
+  margin-right: 3px;
+}
+
+.cotalog-main {
+  margin-bottom: 85px;
+}
+
+.cotalog-main .cotalog-item {
+  margin-bottom: 27px;
+}
+
+.cotalog-main .cotalog-item img {
+  -webkit-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.3);
+  margin-bottom: 10px;
+}
+
+.cotalog-main .cotalog-item p {
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 1.2rem;
+}
+
+.cotalog-main .button {
+  background-color: #ffffff;
+  border: 1px solid grey;
+}
+
+.cotalog-main .button p {
+  color: #636363;
+  margin-top: 14px;
+}
+
+.inst-block title {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 44px;
+}
+
+.inst-block .inst-carousel {
+  margin-bottom: 33px;
+}
+
+.inst-block .inst-carousel img {
+  margin-bottom: 15px;
+}
+
+.inst-block .inst-carousel p {
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #adafb3;
+}
+
+.inst-block .inst-carousel .owl-dots {
+  margin-top: 22px;
+  text-align: center;
+}
+
+.inst-block .inst-carousel .owl-dots button {
+  width: 10px;
+  height: 10px;
+  background: silver;
+  border-radius: 50%;
+  margin: 0 3px;
+}
+
+.inst-block .inst-carousel .owl-dots .active {
+  background: gray;
+}
+
+.inst-block .button {
+  background: #ff005d;
+  padding-top: 14px;
+}
+
 @font-face {
   font-family: "Nether";
   src: url(../fonts/nether/nether.ttf) format("truetype");
@@ -159,21 +295,16 @@ title {
 .navbar {
   -webkit-transition: all 0s ease;
   transition: all 0s ease;
-  text-transform: uppercase;
   font-size: 18px;
-  font-weight: lighter;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
-  position: absolute;
+  position: absolutea;
   left: 0;
   right: 0;
   top: 0;
