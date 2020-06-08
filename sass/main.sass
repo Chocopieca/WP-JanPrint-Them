@@ -83,19 +83,31 @@ title
 .container
     margin-bottom: 50px
 // navbar
+.show + .bg-shadow
+    position: absolute
+    background: black
+    right: 0
+    top: 0
+    left: 0
+    width: 100%
+    height: 200%
+    z-index: 49
+    opacity: 0.6
 .navbar
     transition: all 0s ease
     font-size: 18px
     text-align: center
     display: flex
     flex-flow: column
-    position: absolutea
-    left: 0
+    position: absolute
     right: 0
     top: 0
+    bottom: 0
     background: $bg-color
-    padding: 135px 0 30px
+    padding: 135px 15px 0
     z-index: 50
+    border-radius: 0 0 0 15px
+    height: 100vh
     ul
         li
             margin-top: 37px
@@ -113,16 +125,17 @@ title
             background-position: -10px 28px
         .instagram
             background-position: -60px -51px
-.show + header + .wrapper
+.show + .bg-shadow + header + .wrapper
         position: fixed
 // header
 header
     // margin-bottom: 30px
     .logo
         margin-right: 15px
-    .show + a + .nav-right-block
-        button
-            background-position: -6px -52px
+    .show + .bg-shadow + header
+        .logo + .nav-right-block
+            button
+                background-position: -6px -52px
     .nav-right-block
         margin-top: 20px
         button
