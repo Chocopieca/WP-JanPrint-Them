@@ -1,30 +1,32 @@
+// owlCarousel
 $(document).ready(function(){
     $(".owl-carousel").owlCarousel();
-})
+});
+
 
 $(".first-carousel").owlCarousel({
     loop: true,
-    margin: 0,
-    items: 1,
     navText: "",
-})
+    items: 1,
+    margin: 10,
+    nav: false
+});
 
 $(".second-carousel").owlCarousel({
     loop: true,
-    margin: 10,
-    items: 1,
     navText: "",
+    items: 1,
+    margin: 10,
     autoplay: false,
+    dots: false,
     nav: true,
-    dots: false
-})
+});
 
 $(".third-carousel").owlCarousel({
     loop: true,
-    margin: 10,
-    items: 1,
     navText: "",
-    nav: false,
+    items: 1,
+    margin: 10,
     dots: true,
     responsive: {
         768:{
@@ -32,38 +34,43 @@ $(".third-carousel").owlCarousel({
             nav: true
         }
     }
-})
+});
 
 $('.catalog-carousel').owlCarousel({
+    navText: "",
     loop:false,
     margin:5,
     nav:true,
-    navText: "",
+    dots: false,
     items: 1,
     responsive:{
-        0:{
-            items:1
-        },
         768:{
             items:3
         }
     }
-})
+});
 
 $('.inst-carousel').owlCarousel({
-    loop:true,
-    margin:5,
-    nav:false,
+    loop: true,
     navText: "",
     items: 1,
+    margin:5,
+    nav:false,
     dots: true,
     autoplay: true,
     responsive:{
-        0:{
-            items:1
-        },
         768:{
             items:3
         }
     }
-})
+});
+
+// code
+
+let burger = document.querySelector('.nav-right-block>button');
+
+
+burger.onclick = function() {
+    this.classList.toggle("close");
+    document.body.classList.toggle("hidden");
+}
