@@ -67,10 +67,17 @@ $('.inst-carousel').owlCarousel({
 
 // code
 
-let burger = document.querySelector('.nav-right-block>button');
+let burger = document.querySelector('.nav-right-block>button'),
+    shadow = document.querySelector('.shadow'),
+    nav = document.getElementById('navbarContent')
 
+console.log(burger)
+console.log(shadow)
+console.log(nav)
 
-burger.onclick = function() {
-    this.classList.toggle("close");
+function closeNav() {
+    burger.classList.toggle("close");
     document.body.classList.toggle("hidden");
 }
+burger.onclick = closeNav;
+shadow.onclick = closeNav;

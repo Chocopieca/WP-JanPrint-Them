@@ -174,8 +174,35 @@ table {
 }
 
 @font-face {
-  font-family: "Nether";
-  src: url(../fonts/nether/nether.ttf) format("truetype");
+  font-family: 'nether';
+  src: url("../fonts/nether-new/nether.eot");
+  src: local("Nether"), url("../fonts/nether-new/nether.woff") format("woff"), url("../fonts/nether-new/nether.ttf") format("truetype"), url("../fonts/nether-new/nether.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Circe';
+  src: url("../fonts/Circe/Circe-Regular.eot");
+  src: local("Circe"), local("../fonts/Circe/Circe-Regular"), url("../fonts/Circe/Circe-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Circe/Circe-Regular.woff") format("woff"), url("../fonts/Circe/Circe-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Circe';
+  src: url("../fonts/Circe/Circe-Bold.eot");
+  src: local("Circe Bold"), local("Circe-Bold"), url("../fonts/Circe/Circe-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Circe/Circe-Bold.woff") format("woff"), url("../fonts/Circe/Circe-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Circe';
+  src: url("../fonts/Circe/Circe-Light.eot");
+  src: local("Circe Light"), local("Circe-Light"), url("../fonts/Circe/Circe-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Circe/Circe-Light.woff") format("woff"), url("../fonts/Circe/Circe-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
 }
 
 html {
@@ -184,7 +211,7 @@ html {
 }
 
 body {
-  font-family: "roboto", sans-serif;
+  font-family: "Circe", sans-serif;
   color: #636363;
   background: #ffffff;
   padding: 19px 15px;
@@ -291,60 +318,72 @@ title {
   margin-bottom: 50px;
 }
 
+i, svg {
+  color: black;
+}
+
+.show + .shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #000000ad;
+  z-index: 49;
+  left: 0;
+  top: 0;
+}
+
 .navbar {
+  display: block;
   -webkit-transition: all 0s ease;
   transition: all 0s ease;
-  font-size: 18px;
-  text-align: center;
   position: absolute;
-  right: 0;
+  background: white;
   top: 0;
-  bottom: 0;
-  left: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
-  background: #ffffff;
-  padding: 135px 15px 0;
+  right: 0;
+  text-align: center;
+  padding: 100px 40px 50px;
   z-index: 50;
-  border-radius: 0 0 0 15px;
-  overflow: auto;
-  height: 100vh;
-  margin-left: 90px;
-  -webkit-box-shadow: -80px 0 0 15px #000000c7;
-          box-shadow: -80px 0 0 15px #000000c7;
+  border-radius: 0 0 0 10px;
+  overflow: scroll;
+}
+
+.navbar ul {
+  margin-bottom: 115px;
+  font-size: 18px;
 }
 
 .navbar ul li {
-  margin-top: 37px;
+  margin-bottom: 35px;
 }
 
-.navbar .social-links {
-  margin-top: 107px;
-  margin-bottom: 35px;
+.navbar .contacts-top {
+  font-size: 16px;
+  margin-bottom: 55px;
+}
+
+.navbar .contacts-top div {
+  padding-bottom: 20px;
+}
+
+.navbar .contacts-top div p {
+  margin-left: 15px;
+}
+
+.navbar .contacts-top div p, .navbar .contacts-top div svg, .navbar .contacts-top div i {
+  display: inline-block;
 }
 
 .navbar .social-links a {
   display: inline-block;
-  width: 20px;
-  height: 20px;
-  background-image: url(../img/css_sprites.png);
+  width: 45px;
+  height: 45px;
+  border: 1px solid gray;
+  border-radius: 50%;
+  padding-top: 10px;
 }
 
-.navbar .social-links .twitter {
-  background-position: 30px -46px;
-}
-
-.navbar .social-links .facebook {
-  background-position: -10px 28px;
-}
-
-.navbar .social-links .instagram {
-  background-position: -60px -51px;
+.navbar .social-links a svg {
+  font-size: 25px;
 }
 
 header .logo {
@@ -353,6 +392,27 @@ header .logo {
 
 header .nav-right-block {
   margin-top: 20px;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .nav-right-block a {
+  padding: 0 5px;
+}
+
+header .nav-right-block a:first-child {
+  border-right: 1px solid gray;
+}
+
+header .nav-right-block .disabled {
+  color: #adafb3;
+  pointer-events: none;
+  cursor: default;
 }
 
 header .nav-right-block button {
@@ -371,24 +431,14 @@ header .nav-right-block .close {
   background-position: -10px -51px;
 }
 
-header .nav-right-block div {
-  display: inline-block;
-  width: 20px;
-  height: 23px;
-  background-image: url(../img/css_sprites.png);
-}
-
-header .nav-right-block .surch {
-  background-position: -45px 30px;
-}
-
-header .nav-right-block .like {
-  background-position: 30px -7px;
-  margin: 0 19px;
-}
-
 header .nav-right-block .basket {
-  background-position: -60px -10px;
+  width: 30px;
+  margin-left: 20px;
+}
+
+header .nav-right-block .basket svg {
+  font-size: 20px;
+  margin-bottom: 5px;
 }
 
 header .navbar-top {
