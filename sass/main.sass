@@ -2,6 +2,7 @@
 @import "test"
 @import "reset"
 @import "catalog-page"
+@import "contact-page"
 
 // font
 // @font-face 
@@ -103,6 +104,7 @@ i, svg
 .social
     a
         display: inline-block
+        text-align: center
         width: 45px
         height: 45px
         border: 1px solid gray
@@ -111,7 +113,7 @@ i, svg
         margin: 0 5px
         svg
             font-size: 21px
-div[class|="contacts"]
+div[class|="contact"]
     text-transform: none
     font-size: 16px
     p
@@ -119,6 +121,13 @@ div[class|="contacts"]
         margin-left: 15px
     p, svg, i
         display: inline-block
+.bradcrumb
+    .breadcrumb-item
+        display: inline-block
+        margin-bottom: 32px
+        text-transform: uppercase
+        a
+            text-decoration: underline
 // navbar
 .show + .shadow
     position: absolute
@@ -146,7 +155,7 @@ div[class|="contacts"]
         font-size: 18px
         li
             margin-bottom: 35px
-    .contacts-top
+    .contact-top
         margin-bottom: 55px
         div
             padding-bottom: 20px
@@ -519,7 +528,7 @@ footer
             color: $light-gray-text
         .help
             margin-bottom: 20px
-        .contacts-bottom
+        .contact-bottom
             margin-bottom: 25px
             p
                 display: inline-block
@@ -586,9 +595,7 @@ footer
             margin-bottom: 3rem
         .menu
             text-align: left
-        .social
-            text-align: center
-        .contacts-bottom
+        .contact-bottom
             text-align: left
             font-size: 13px
             &.right
@@ -647,7 +654,7 @@ footer
     footer
         .slogan
             font-size: 3.5rem
-        .contacts-bottom
+        .contact-bottom
             font-size: 16px
 
 // Large devices (desktops, less than 1200px)

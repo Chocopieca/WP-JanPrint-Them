@@ -68,7 +68,7 @@ $('.inst-carousel').owlCarousel({
 });
 
 // code
-
+// burger
 let burger = document.querySelector('.navbar-toggler'),
     closeBurger = document.querySelector('.close-burger'),
     openBurger = document.querySelector('.open-burger');
@@ -91,6 +91,16 @@ function taggleNavbar() {
 };
 
 burger.onclick = taggleNavbar;
+
+// map
+function myMap() {
+    let mapCanvas = document.getElementById("map"),
+        mapOptions = {
+            center: new google.maps.LatLng(51.5, -0.2),
+            zoom: 10
+        },
+        map = new google.maps.map(mapCanvas, mapOptions);
+}
 
     // if (openBurger.style.display === "none") {
 

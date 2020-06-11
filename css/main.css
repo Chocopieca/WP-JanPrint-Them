@@ -41,16 +41,6 @@ table {
   margin-bottom: 40px;
 }
 
-.container.catalog-filters .bradcrumb .breadcrumb-item {
-  display: inline-block;
-  margin-bottom: 32px;
-  text-transform: uppercase;
-}
-
-.container.catalog-filters .bradcrumb .breadcrumb-item a {
-  text-decoration: underline;
-}
-
 .container.catalog-filters .slogan {
   font-size: 45px;
   margin-bottom: 42px;
@@ -346,6 +336,7 @@ i, svg {
 
 .social a {
   display: inline-block;
+  text-align: center;
   width: 45px;
   height: 45px;
   border: 1px solid gray;
@@ -358,18 +349,28 @@ i, svg {
   font-size: 21px;
 }
 
-div[class|="contacts"] {
+div[class|="contact"] {
   text-transform: none;
   font-size: 16px;
 }
 
-div[class|="contacts"] p {
+div[class|="contact"] p {
   display: inline-block;
   margin-left: 15px;
 }
 
-div[class|="contacts"] p, div[class|="contacts"] svg, div[class|="contacts"] i {
+div[class|="contact"] p, div[class|="contact"] svg, div[class|="contact"] i {
   display: inline-block;
+}
+
+.bradcrumb .breadcrumb-item {
+  display: inline-block;
+  margin-bottom: 32px;
+  text-transform: uppercase;
+}
+
+.bradcrumb .breadcrumb-item a {
+  text-decoration: underline;
 }
 
 .show + .shadow {
@@ -407,11 +408,11 @@ div[class|="contacts"] p, div[class|="contacts"] svg, div[class|="contacts"] i {
   margin-bottom: 35px;
 }
 
-.navbar .contacts-top {
+.navbar .contact-top {
   margin-bottom: 55px;
 }
 
-.navbar .contacts-top div {
+.navbar .contact-top div {
   padding-bottom: 20px;
 }
 
@@ -950,11 +951,11 @@ footer .links-block .help {
   margin-bottom: 20px;
 }
 
-footer .links-block .contacts-bottom {
+footer .links-block .contact-bottom {
   margin-bottom: 25px;
 }
 
-footer .links-block .contacts-bottom p {
+footer .links-block .contact-bottom p {
   display: inline-block;
   margin-bottom: 21px;
 }
@@ -1029,14 +1030,11 @@ footer .links-block .social a {
   footer .menu {
     text-align: left;
   }
-  footer .social {
-    text-align: center;
-  }
-  footer .contacts-bottom {
+  footer .contact-bottom {
     text-align: left;
     font-size: 13px;
   }
-  footer .contacts-bottom.right {
+  footer .contact-bottom.right {
     text-align: right;
   }
   footer .tablet {
@@ -1104,7 +1102,7 @@ footer .links-block .social a {
   footer .slogan {
     font-size: 3.5rem;
   }
-  footer .contacts-bottom {
+  footer .contact-bottom {
     font-size: 16px;
   }
 }
