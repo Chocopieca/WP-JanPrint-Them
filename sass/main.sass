@@ -95,24 +95,30 @@ title
     justify-content: center
     text-align: end
     color: $black-text
-    font-weight: 500
-.social
-    a
-        display: inline-block
-        width: 20px
-        height: 20px
-        background-image: url(../img/css_sprites.png)
-        margin: 0 6px
-    a:nth-child(1)
-        background-position: 30px -45px
-    a:nth-child(2)
-        background-position: -9px 29px
-    a:nth-child(3)
-        background-position: -59px 71px
+    font-weight: 500S
 .container
     margin-bottom: 50px
 i, svg
     color: black
+.social
+    a
+        display: inline-block
+        width: 45px
+        height: 45px
+        border: 1px solid gray
+        border-radius: 50%
+        padding: 10px 0 0 1px
+        margin: 0 5px
+        svg
+            font-size: 21px
+div[class|="contacts"]
+    text-transform: none
+    font-size: 16px
+    p
+        display: inline-block
+        margin-left: 15px
+    p, svg, i
+        display: inline-block
 // navbar
 .show + .shadow
     position: absolute
@@ -141,25 +147,9 @@ i, svg
         li
             margin-bottom: 35px
     .contacts-top
-        font-size: 16px
         margin-bottom: 55px
         div
             padding-bottom: 20px
-            p
-                margin-left: 15px
-            p, svg, i
-                display: inline-block
-    .social-links
-        a
-            display: inline-block
-            width: 45px
-            height: 45px
-            border: 1px solid gray
-            border-radius: 50%
-            padding-top: 10px
-            svg
-                font-size: 25px
-
 // header
 header
     // margin-bottom: 30px
@@ -182,14 +172,17 @@ header
             position: relative
             z-index: 100
             display: inline-block
-            width: 31px
+            width: 27px
             height: 23px
-            background-image: url(../img/css_sprites.png)
-            background-position: -10px -10px
             margin-left: 35px
             padding: 0
-        .close
-            background-position: -10px -51px
+            font-size: 30px
+            bottom: 3px
+            .open-burger
+                display: block
+            .close-burger
+                width: 21px
+                display: none
         .basket
             width: 30px
             margin-left: 20px
@@ -510,21 +503,31 @@ header
                         margin-right: 3px
 // footer
 footer
+    .container
+        margin-bottom: 0
     .slogan
         text-transform: none
         font-size: 30px
-        margin-bottom: 15px
+        margin-bottom: 30px
     .links-block
         text-transform: uppercase
         text-align: center
         a,p
             display: block
-            margin-bottom: 15px
+            margin-bottom: 25px
         p
             color: $light-gray-text
+        .help
+            margin-bottom: 20px
+        .contacts-bottom
+            margin-bottom: 25px
+            p
+                display: inline-block
+                margin-bottom: 21px
         .social
             a
                 display: inline-block
+
 // Extra small devices (portrait phones, less than 576px)
 @media (min-width: 575.98px)
     body
@@ -575,29 +578,26 @@ footer
                     line-height: 1.5rem
                     text-align: left
     footer
-        .container
-            margin-bottom: 30px
+        .links-block
+            p, a
+                margin-bottom: 21px
         .slogan
-            font-size: 2rem
-        .help
+            font-size: 3.5rem
+            margin-bottom: 3rem
+        .menu
             text-align: left
-        .currency
-            text-align: right
         .social
             text-align: center
-            padding-bottom: 30px
+        .contacts-bottom
+            text-align: left
+            font-size: 13px
+            &.right
+                text-align: right
         .tablet
             text-transform: uppercase
             color: $light-gray-text
-        .payment
-            display: inline-block
-            width: 100%
-            height: 35px
-            background-image: url(../img/payment.jpg)
-            background-repeat: no-repeat
-            background-position-x: 50%
-            
-
+            display: flex
+            align-items: flex-end
 // Medium devices (tablets, less than 992px)
 @media (min-width: 991.98px)
     header
@@ -646,7 +646,9 @@ footer
                 font-size: 24px
     footer
         .slogan
-            font-size: 3rem
+            font-size: 3.5rem
+        .contacts-bottom
+            font-size: 16px
 
 // Large devices (desktops, less than 1200px)
 @media (min-width: 1199.98px)

@@ -54,34 +54,65 @@ $('.inst-carousel').owlCarousel({
     loop: true,
     navText: "",
     items: 1,
-    margin:5,
+    margin:50,
     nav:false,
     dots: true,
     autoplay: true,
     responsive:{
         768:{
-            items:3
+            items:3,
+            dots: false,
+            nav: true
         }
     }
 });
 
 // code
 
-let burger = document.querySelector('.nav-right-block>button'),
-    shadow = document.querySelector('.shadow'),
-    nav = document.getElementById('navbarContent')
+let burger = document.querySelector('.navbar-toggler'),
+    closeBurger = document.querySelector('.close-burger'),
+    openBurger = document.querySelector('.open-burger');
 
-console.log(burger)
-console.log(shadow)
-console.log(nav)
+console.log(burger);
+console.log(closeBurger.style.display === "");
+console.log(openBurger.style.display === "");
 
-// function.openNavBar() {
+function taggleNavbar() {
+    if (openBurger.style.display === "") {
+        openBurger.style.display = "none";
+        closeBurger.style.display = "block";
+        document.body.classList.toggle("hidden");
+        return
+    } else if (openBurger.style.display === "none") {
+        openBurger.style.display = "";
+        closeBurger.style.display = "";
+        document.body.classList.toggle("hidden");
+    }
+};
 
+burger.onclick = taggleNavbar;
+
+    // if (openBurger.style.display === "none") {
+
+    // }
+
+
+    // openBurger.style.display === "" 
+    // ? () => {
+    //     openBurger.style.display = "none"
+    //     closeBurger.style.display = "block"
+    //     return
+    // } 
+    // : () => {
+    //     openBurger.style.display = ""
+    //     closeBurger.style.display = ""
+    // }
+
+// function closeBurger() {
+//     burger.classList.toggle("close");
+//     document.body.classList.toggle("hidden");
 // }
 
-function closeBurger() {
-    burger.classList.toggle("close");
-    document.body.classList.toggle("hidden");
-}
-burger.onclick = closeBurger;
-shadow.onclick = closeBurger;
+
+// burger.onclick = closeBurger;
+// shadow.onclick = closeBurger;

@@ -38,16 +38,17 @@ table {
 }
 
 .container.catalog-filters {
-  margin-bottom: 20px;
-}
-
-.container.catalog-filters .bradcrumb li:first-child {
-  text-decoration: underline;
+  margin-bottom: 40px;
 }
 
 .container.catalog-filters .bradcrumb .breadcrumb-item {
   display: inline-block;
   margin-bottom: 32px;
+  text-transform: uppercase;
+}
+
+.container.catalog-filters .bradcrumb .breadcrumb-item a {
+  text-decoration: underline;
 }
 
 .container.catalog-filters .slogan {
@@ -100,63 +101,67 @@ table {
   margin-right: 3px;
 }
 
-.cotalog-main {
+.container.cotalog-main {
   margin-bottom: 85px;
 }
 
-.cotalog-main .cotalog-item {
+.container.cotalog-main .cotalog-item {
   margin-bottom: 27px;
 }
 
-.cotalog-main .cotalog-item img {
+.container.cotalog-main .cotalog-item img {
   -webkit-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.3);
           box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.3);
   margin-bottom: 10px;
 }
 
-.cotalog-main .cotalog-item p {
+.container.cotalog-main .cotalog-item p {
   font-weight: 500;
   text-transform: uppercase;
   line-height: 1.2rem;
 }
 
-.cotalog-main .button {
+.container.cotalog-main .button {
   background-color: #ffffff;
   border: 1px solid grey;
 }
 
-.cotalog-main .button p {
+.container.cotalog-main .button p {
   color: #636363;
   margin-top: 14px;
 }
 
-.inst-block title {
+.container.inst-block {
+  margin-bottom: 50px;
+}
+
+.container.inst-block title {
   font-size: 20px;
   font-weight: bold;
   text-align: center;
   margin-bottom: 44px;
 }
 
-.inst-block .inst-carousel {
+.container.inst-block .inst-carousel {
   margin-bottom: 33px;
 }
 
-.inst-block .inst-carousel img {
+.container.inst-block .inst-carousel img {
   margin-bottom: 15px;
 }
 
-.inst-block .inst-carousel p {
+.container.inst-block .inst-carousel p {
   font-weight: 500;
   text-transform: uppercase;
   color: #adafb3;
 }
 
-.inst-block .inst-carousel .owl-dots {
+.container.inst-block .inst-carousel .owl-dots {
   margin-top: 22px;
   text-align: center;
 }
 
-.inst-block .inst-carousel .owl-dots button {
+.container.inst-block .inst-carousel .owl-dots button {
   width: 10px;
   height: 10px;
   background: silver;
@@ -164,11 +169,48 @@ table {
   margin: 0 3px;
 }
 
-.inst-block .inst-carousel .owl-dots .active {
+.container.inst-block .inst-carousel .owl-dots .active {
   background: gray;
 }
 
-.inst-block .button {
+.container.inst-block .inst-carousel .owl-nav button {
+  width: 27px;
+  height: 27px;
+  position: absolute;
+  border: 1px solid gray;
+  border-radius: 50%;
+  top: 40%;
+}
+
+.container.inst-block .inst-carousel .owl-nav button::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-left: 1px solid #000000;
+  border-top: 1px solid #000000;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  margin-left: 3px;
+  left: 1px;
+}
+
+.container.inst-block .inst-carousel .owl-nav button:first-child {
+  left: -10%;
+}
+
+.container.inst-block .inst-carousel .owl-nav button:last-child {
+  right: -10%;
+}
+
+.container.inst-block .inst-carousel .owl-nav button:last-child::before {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  margin-left: 0;
+  margin-right: 3px;
+}
+
+.container.inst-block .button {
   background: #ff005d;
   padding-top: 14px;
 }
@@ -291,27 +333,7 @@ title {
           justify-content: center;
   text-align: end;
   color: #090b0c;
-  font-weight: 500;
-}
-
-.social a {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  background-image: url(../img/css_sprites.png);
-  margin: 0 6px;
-}
-
-.social a:nth-child(1) {
-  background-position: 30px -45px;
-}
-
-.social a:nth-child(2) {
-  background-position: -9px 29px;
-}
-
-.social a:nth-child(3) {
-  background-position: -59px 71px;
+  font-weight: 500S;
 }
 
 .container {
@@ -320,6 +342,34 @@ title {
 
 i, svg {
   color: black;
+}
+
+.social a {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  border: 1px solid gray;
+  border-radius: 50%;
+  padding: 10px 0 0 1px;
+  margin: 0 5px;
+}
+
+.social a svg {
+  font-size: 21px;
+}
+
+div[class|="contacts"] {
+  text-transform: none;
+  font-size: 16px;
+}
+
+div[class|="contacts"] p {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+div[class|="contacts"] p, div[class|="contacts"] svg, div[class|="contacts"] i {
+  display: inline-block;
 }
 
 .show + .shadow {
@@ -358,33 +408,11 @@ i, svg {
 }
 
 .navbar .contacts-top {
-  font-size: 16px;
   margin-bottom: 55px;
 }
 
 .navbar .contacts-top div {
   padding-bottom: 20px;
-}
-
-.navbar .contacts-top div p {
-  margin-left: 15px;
-}
-
-.navbar .contacts-top div p, .navbar .contacts-top div svg, .navbar .contacts-top div i {
-  display: inline-block;
-}
-
-.navbar .social-links a {
-  display: inline-block;
-  width: 45px;
-  height: 45px;
-  border: 1px solid gray;
-  border-radius: 50%;
-  padding-top: 10px;
-}
-
-.navbar .social-links a svg {
-  font-size: 25px;
 }
 
 header .logo {
@@ -420,16 +448,21 @@ header .nav-right-block button {
   position: relative;
   z-index: 100;
   display: inline-block;
-  width: 31px;
+  width: 27px;
   height: 23px;
-  background-image: url(../img/css_sprites.png);
-  background-position: -10px -10px;
   margin-left: 35px;
   padding: 0;
+  font-size: 30px;
+  bottom: 3px;
 }
 
-header .nav-right-block .close {
-  background-position: -10px -51px;
+header .nav-right-block button .open-burger {
+  display: block;
+}
+
+header .nav-right-block button .close-burger {
+  width: 21px;
+  display: none;
 }
 
 header .nav-right-block .basket {
@@ -889,10 +922,14 @@ header .navbar-top li {
   margin-right: 3px;
 }
 
+footer .container {
+  margin-bottom: 0;
+}
+
 footer .slogan {
   text-transform: none;
   font-size: 30px;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 
 footer .links-block {
@@ -902,11 +939,24 @@ footer .links-block {
 
 footer .links-block a, footer .links-block p {
   display: block;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 
 footer .links-block p {
   color: #adafb3;
+}
+
+footer .links-block .help {
+  margin-bottom: 20px;
+}
+
+footer .links-block .contacts-bottom {
+  margin-bottom: 25px;
+}
+
+footer .links-block .contacts-bottom p {
+  display: inline-block;
+  margin-bottom: 21px;
 }
 
 footer .links-block .social a {
@@ -969,33 +1019,35 @@ footer .links-block .social a {
     line-height: 1.5rem;
     text-align: left;
   }
-  footer .container {
-    margin-bottom: 30px;
+  footer .links-block p, footer .links-block a {
+    margin-bottom: 21px;
   }
   footer .slogan {
-    font-size: 2rem;
+    font-size: 3.5rem;
+    margin-bottom: 3rem;
   }
-  footer .help {
+  footer .menu {
     text-align: left;
-  }
-  footer .currency {
-    text-align: right;
   }
   footer .social {
     text-align: center;
-    padding-bottom: 30px;
+  }
+  footer .contacts-bottom {
+    text-align: left;
+    font-size: 13px;
+  }
+  footer .contacts-bottom.right {
+    text-align: right;
   }
   footer .tablet {
     text-transform: uppercase;
     color: #adafb3;
-  }
-  footer .payment {
-    display: inline-block;
-    width: 100%;
-    height: 35px;
-    background-image: url(../img/payment.jpg);
-    background-repeat: no-repeat;
-    background-position-x: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
   }
 }
 
@@ -1050,7 +1102,10 @@ footer .links-block .social a {
     font-size: 24px;
   }
   footer .slogan {
-    font-size: 3rem;
+    font-size: 3.5rem;
+  }
+  footer .contacts-bottom {
+    font-size: 16px;
   }
 }
 
