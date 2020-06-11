@@ -75,9 +75,13 @@ console.log(burger)
 console.log(shadow)
 console.log(nav)
 
-function closeNav() {
+// function.openNavBar() {
+
+// }
+
+function closeBurger() {
     burger.classList.toggle("close");
     document.body.classList.toggle("hidden");
 }
-burger.onclick = closeNav;
-shadow.onclick = closeNav;
+burger.onclick = closeBurger;
+shadow.onclick = closeBurger;
