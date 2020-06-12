@@ -91,12 +91,12 @@ title
         margin-bottom: 50px        
 .slogan
     font-family: "Nether"
-    font-size: 35px
+    font-size: 50px
     display: flex
     justify-content: center
     text-align: end
     color: $black-text
-    font-weight: 500S
+    font-weight: 500
 .container
     margin-bottom: 50px
 i, svg
@@ -122,12 +122,28 @@ div[class|="contact"]
     p, svg, i
         display: inline-block
 .bradcrumb
+    margin-bottom: 32px
+    color: $light-gray-text
     .breadcrumb-item
         display: inline-block
-        margin-bottom: 32px
         text-transform: uppercase
         a
             text-decoration: underline
+form
+    input, textarea
+        margin-bottom: 18px
+        border-radius: 20px
+        border: 1px solid gray
+        height: 40px
+        padding-left: 19px
+        opacity: 0.6
+    input[type="submit"]
+        background: $pink-button
+        color: $white-text
+        text-transform: uppercase
+        opacity: 1
+        margin-bottom: 0
+        padding: 0
 // navbar
 .show + .shadow
     position: absolute
@@ -410,20 +426,6 @@ header
         font-size: 18px
     img
         margin-bottom: 32px
-    form
-        input
-            margin-bottom: 18px
-            border-radius: 100px
-            border: 1px solid gray
-            height: 40px
-            padding-left: 19px
-            opacity: 0.6
-        input[type="submit"]
-            background: $pink-button
-            color: $white-text
-            text-transform: uppercase
-            opacity: 1
-            margin-bottom: 0
 // reviews-block
 .reviews-block
     .owl-dots

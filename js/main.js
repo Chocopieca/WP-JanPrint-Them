@@ -73,10 +73,6 @@ let burger = document.querySelector('.navbar-toggler'),
     closeBurger = document.querySelector('.close-burger'),
     openBurger = document.querySelector('.open-burger');
 
-console.log(burger);
-console.log(closeBurger.style.display === "");
-console.log(openBurger.style.display === "");
-
 function taggleNavbar() {
     if (openBurger.style.display === "") {
         openBurger.style.display = "none";
@@ -93,13 +89,12 @@ function taggleNavbar() {
 burger.onclick = taggleNavbar;
 
 // map
-function myMap() {
-    let mapCanvas = document.getElementById("map"),
-        mapOptions = {
-            center: new google.maps.LatLng(51.5, -0.2),
-            zoom: 10
-        },
-        map = new google.maps.map(mapCanvas, mapOptions);
+var map;
+function initMap() {
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: -34.397, lng: 150.644 },
+    zoom: 8
+  });
 }
 
     // if (openBurger.style.display === "none") {

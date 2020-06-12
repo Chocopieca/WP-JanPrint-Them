@@ -205,6 +205,73 @@ table {
   padding-top: 14px;
 }
 
+.contact-page h1 {
+  margin-bottom: 30px;
+}
+
+.contact-page .social {
+  text-align: center;
+  margin-bottom: 42px;
+}
+
+.contact-page .contact-text {
+  font-size: 16px;
+  color: #adafb3;
+  margin-bottom: 64px;
+  line-height: 1.7rem;
+}
+
+.contact-page .contact-info-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+.contact-page .contact-info-block svg, .contact-page .contact-info-block i {
+  display: block;
+  width: 45px;
+  height: 45px;
+  border: 1px solid gray;
+  border-radius: 50%;
+  padding: 10px 0 10px 1px;
+  margin: 0 5px 31px;
+}
+
+.contact-page .contact-info-block p {
+  text-align: center;
+  margin: 0 0 63px 0;
+}
+
+.contact-page form {
+  margin-bottom: 64px;
+}
+
+.contact-page form input {
+  width: 100%;
+}
+
+.contact-page form textarea {
+  text-align: start;
+  border-radius: 20px;
+  width: 100%;
+  height: 170px;
+  padding: 14px 15px;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+}
+
+.contact-page .google-map {
+  width: 100%;
+  height: 310px;
+}
+
 @font-face {
   font-family: 'nether';
   src: url("../fonts/nether-new/nether.eot");
@@ -314,7 +381,7 @@ title {
 
 .slogan {
   font-family: "Nether";
-  font-size: 35px;
+  font-size: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -323,7 +390,7 @@ title {
           justify-content: center;
   text-align: end;
   color: #090b0c;
-  font-weight: 500S;
+  font-weight: 500;
 }
 
 .container {
@@ -363,14 +430,36 @@ div[class|="contact"] p, div[class|="contact"] svg, div[class|="contact"] i {
   display: inline-block;
 }
 
+.bradcrumb {
+  margin-bottom: 32px;
+  color: #adafb3;
+}
+
 .bradcrumb .breadcrumb-item {
   display: inline-block;
-  margin-bottom: 32px;
   text-transform: uppercase;
 }
 
 .bradcrumb .breadcrumb-item a {
   text-decoration: underline;
+}
+
+form input, form textarea {
+  margin-bottom: 18px;
+  border-radius: 20px;
+  border: 1px solid gray;
+  height: 40px;
+  padding-left: 19px;
+  opacity: 0.6;
+}
+
+form input[type="submit"] {
+  background: #ff005d;
+  color: #ffffff;
+  text-transform: uppercase;
+  opacity: 1;
+  margin-bottom: 0;
+  padding: 0;
 }
 
 .show + .shadow {
@@ -780,23 +869,6 @@ header .navbar-top li {
 
 .form-block img {
   margin-bottom: 32px;
-}
-
-.form-block form input {
-  margin-bottom: 18px;
-  border-radius: 100px;
-  border: 1px solid gray;
-  height: 40px;
-  padding-left: 19px;
-  opacity: 0.6;
-}
-
-.form-block form input[type="submit"] {
-  background: #ff005d;
-  color: #ffffff;
-  text-transform: uppercase;
-  opacity: 1;
-  margin-bottom: 0;
 }
 
 .reviews-block .owl-dots {
