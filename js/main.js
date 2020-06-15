@@ -67,11 +67,30 @@ $('.inst-carousel').owlCarousel({
     }
 });
 
+$('.advantages-carousel').owlCarousel({
+    loop: true,
+    navText: "",
+    items: 1,
+    margin:50,
+    dots: true,
+    autoplay: true,
+    responsive:{
+        768:{
+            items:2
+        },
+        992:{
+            items:4,
+            autoplay:false
+        }
+    }
+});
+
 // code
 // burger
 let burger = document.querySelector('.navbar-toggler'),
     closeBurger = document.querySelector('.close-burger'),
-    openBurger = document.querySelector('.open-burger');
+    openBurger = document.querySelector('.open-burger'),
+    shadowButton = document.querySelector(".shadow");
 
 function taggleNavbar() {
     if (openBurger.style.display === "") {
@@ -87,6 +106,7 @@ function taggleNavbar() {
 };
 
 burger.onclick = taggleNavbar;
+shadowButton.onclick = taggleNavbar;
 
 // map
 // var map;

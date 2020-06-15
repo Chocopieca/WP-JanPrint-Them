@@ -3,6 +3,7 @@
 @import "reset"
 @import "catalog-page"
 @import "contact-page"
+@import "about-us"
 
 // font
 // @font-face
@@ -145,6 +146,18 @@ form
         opacity: 1
         margin-bottom: 0
         padding: 0
+.owl-carousel
+    .owl-dots
+        margin-top: 17px
+        text-align: center
+        button
+            width: 10px
+            height: 10px
+            border-radius: 50%
+            background-color: $light-gray-text
+            margin-right: 7px
+        .active
+            background-color: $dark-gray-text
 // navbar
 .show + .shadow
     position: absolute
@@ -228,17 +241,6 @@ header
         font-weight: bold
         .first-carousel
             position: relative
-            .owl-dots
-                margin-top: 17px
-                text-align: center
-                button
-                    width: 10px
-                    height: 10px
-                    border-radius: 50%
-                    background-color: $light-gray-text
-                    margin-right: 7px
-                .active
-                    background-color: $dark-gray-text
             div[class|="baner"]
                 margin-top: 44px
                 position: relative
@@ -429,16 +431,6 @@ header
         margin-bottom: 32px
 // reviews-block
 .reviews-block
-    .owl-dots
-        text-align: center
-        button
-            width: 10px
-            height: 10px
-            background-color: $light-gray-text
-            border-radius: 50%
-            margin: 0 1%
-        .active
-            background-color: $dark-gray-text
     .title
         text-align: center
     .portrait
