@@ -291,6 +291,10 @@ table {
   border-radius: 40px;
 }
 
+.contact-page .google-map {
+  height: 310px;
+}
+
 @font-face {
   font-family: 'nether';
   src: url("../fonts/nether-new/nether.eot");
@@ -382,7 +386,7 @@ li a {
   color: #ffffff;
 }
 
-title {
+.title {
   font-size: 24px;
   text-transform: uppercase;
   color: #adafb3;
@@ -393,7 +397,7 @@ title {
 }
 
 @media (max-width: 768px) {
-  title {
+  .title {
     margin-bottom: 50px;
   }
 }
@@ -886,7 +890,7 @@ header .navbar-top li {
   color: #ffffff;
 }
 
-.form-block title {
+.form-block .title {
   font-size: 18px;
 }
 
@@ -910,7 +914,7 @@ header .navbar-top li {
   background-color: #636363;
 }
 
-.reviews-block title {
+.reviews-block .title {
   text-align: center;
 }
 
@@ -1191,7 +1195,7 @@ footer .links-block .social a {
   .wrapper .catalog-block .catalog-way .slogan {
     font-size: 54px;
   }
-  .wrapper .form-block title {
+  .wrapper .form-block .title {
     font-size: 24px;
   }
   footer .slogan {
