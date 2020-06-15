@@ -205,12 +205,27 @@ table {
   padding-top: 14px;
 }
 
+@media (min-width: 768px) {
+  .contact-page .slogan {
+    margin-bottom: 60px;
+  }
+}
+
+.contact-page .container {
+  margin-bottom: 84px;
+}
+
+@media (min-width: 768px) {
+  .contact-page .container {
+    margin-bottom: 112px;
+  }
+}
+
 .contact-page h1 {
   margin-bottom: 30px;
 }
 
 .contact-page .social {
-  text-align: center;
   margin-bottom: 42px;
 }
 
@@ -249,6 +264,12 @@ table {
   margin: 0 0 63px 0;
 }
 
+@media (min-width: 768px) {
+  .contact-page .contact-info-block p {
+    margin-bottom: 108px;
+  }
+}
+
 .contact-page form {
   margin-bottom: 64px;
 }
@@ -264,12 +285,10 @@ table {
   height: 170px;
   padding: 14px 15px;
   margin-bottom: 18px;
-  text-transform: uppercase;
 }
 
-.contact-page .google-map {
-  width: 100%;
-  height: 310px;
+.contact-page iframe {
+  border-radius: 40px;
 }
 
 @font-face {
@@ -399,6 +418,10 @@ title {
 
 i, svg {
   color: black;
+}
+
+.social {
+  text-align: center;
 }
 
 .social a {
