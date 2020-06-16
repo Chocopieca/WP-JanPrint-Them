@@ -283,6 +283,10 @@ table {
   color: #adafb3;
 }
 
+.about-us-page .container {
+  margin-bottom: 100px;
+}
+
 .about-us-page .bradcrumb {
   text-align: left;
 }
@@ -295,6 +299,11 @@ table {
   margin-bottom: 56px;
 }
 
+.about-us-page .about-autor p {
+  font-size: 18px;
+  line-height: 25px;
+}
+
 .about-us-page .portrait {
   display: inline-block;
   width: 100px;
@@ -304,6 +313,12 @@ table {
   background-position: 40% 10%;
   position: relative;
   margin-bottom: 15px;
+}
+
+@media (min-width: 768px) {
+  .about-us-page .portrait {
+    margin-bottom: 35px;
+  }
 }
 
 .about-us-page .advantages-carousel {
@@ -345,13 +360,10 @@ table {
 .about-us-page .jam-card {
   background-color: #cc9898;
   border-radius: 40px;
-  padding: 34px;
+  padding: 35px 35px 355px 35px;
   overflow: hidden;
-  position: relative;
-  padding-bottom: 335px;
   -webkit-box-shadow: 0px 7px 10px 2px #0000001f;
           box-shadow: 0px 7px 10px 2px #0000001f;
-  margin-bottom: 70px;
 }
 
 .about-us-page .jam-card p {
@@ -365,21 +377,34 @@ table {
   background: url(../img/jam.png) no-repeat;
   background-size: contain;
   position: absolute;
-  top: 70%;
-  left: -30px;
-  width: 134%;
-  height: 100%;
+  bottom: 0;
+  right: -20%;
+  min-width: 130%;
+  min-height: 30%;
 }
 
-@media (min-width: 375px) {
+@media (min-width: 374px) {
   .about-us-page .jam-card .jam {
-    top: 60%;
+    height: 41%;
   }
 }
 
-@media (min-width: 400px) {
+@media (min-width: 425px) {
   .about-us-page .jam-card .jam {
-    top: 50%;
+    height: 51%;
+  }
+}
+
+@media (min-width: 768px) {
+  .about-us-page .jam-card {
+    padding: 67px;
+  }
+  .about-us-page .jam-card .jam {
+    top: 0;
+    bottom: 0;
+    right: -40%;
+    min-width: 80%;
+    min-height: 100%;
   }
 }
 

@@ -1,12 +1,17 @@
 .about-us-page
     text-align: center
     color: $light-gray-text
+    .container
+        margin-bottom: 100px
     .bradcrumb
         text-align: left
     .slogan
         margin-bottom: 35px
     .about-autor
         margin-bottom: 56px
+        p
+            font-size: 18px
+            line-height: 25px
     .portrait
         display: inline-block
         width: 100px
@@ -16,6 +21,8 @@
         background-position: 40% 10%
         position: relative
         margin-bottom: 15px
+        @media ( min-width: 768px )
+            margin-bottom: 35px
     .advantages-carousel
         margin-bottom: 70px
         img
@@ -43,12 +50,9 @@
     .jam-card
         background-color: $soft-pink
         border-radius: 40px
-        padding: 34px
+        padding: 35px 35px 355px 35px
         overflow: hidden
-        position: relative
-        padding-bottom: 335px
         box-shadow: 0px 7px 10px 2px #0000001f
-        margin-bottom: 70px
         p
             text-align: left
             color: $white-text
@@ -58,11 +62,19 @@
             background: url(../img/jam.png) no-repeat
             background-size: contain
             position: absolute
-            top: 70%
-            left: -30px
-            width: 134%
-            height: 100%
-            @media ( min-width: 375px )
-                top: 60%
-            @media ( min-width: 400px )
-                top: 50%
+            bottom: 0
+            right: -20%
+            min-width: 130%
+            min-height: 30%
+            @media ( min-width: 374px )
+                height: 41%
+            @media ( min-width: 425px )
+                height: 51%
+        @media ( min-width: 768px )
+            padding: 67px
+            .jam
+                top: 0
+                bottom: 0
+                right: -40%
+                min-width: 80%
+                min-height: 100%
