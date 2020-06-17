@@ -108,6 +108,40 @@ function taggleNavbar() {
 burger.onclick = taggleNavbar;
 shadowButton.onclick = taggleNavbar;
 
+// faq
+// let showAnswer = document.querySelectorAll(".question-button"),
+//     questionBlock = showAnswer.dataset.target,
+//     answer = document.getElementById(questionBlock);
+
+
+// console.log(showAnswer);
+// console.log(questionBlock);
+// console.log(answer)
+
+document.onclick = function(event) {
+    let target = event.target,
+        data_target = target.dataset.target;
+    if (target.classList != "question-button") return;
+
+    answer = document.getElementById(data_target);
+
+    if (answer.style.display === "") {
+        answer.style.display = "block"
+        return
+    } else if (answer.style.display === "block") {
+        answer.style.display = ""
+    }
+};
+
+// showAnswer.onclick = function() {
+
+// }
+
+
+// function taggleFaqCard() {
+    
+// }
+
 // map
 // var map;
 // function initMap() {

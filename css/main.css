@@ -431,14 +431,18 @@ iframe {
   }
 }
 
-.faq-page .faq-block .question {
+.faq-page .faq-block .faq-item {
   -webkit-box-shadow: 0 7px 15px 0 #80808040;
           box-shadow: 0 7px 15px 0 #80808040;
   border-radius: 20px;
   margin-bottom: 30px;
-  padding: 30px;
-  font-size: 18px;
+  padding: 15px;
   line-height: 30px;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.faq-page .faq-block .faq-item .question {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -448,17 +452,18 @@ iframe {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  font-size: 18px;
 }
 
-.faq-page .faq-block .question p, .faq-page .faq-block .question button {
+.faq-page .faq-block .faq-item .question p, .faq-page .faq-block .faq-item .question button {
   display: inline-block;
 }
 
-.faq-page .faq-block .question p {
+.faq-page .faq-block .faq-item .question p {
   width: 80%;
 }
 
-.faq-page .faq-block .question button {
+.faq-page .faq-block .faq-item .question button {
   cursor: pointer;
   width: 27px;
   height: 27px;
@@ -467,7 +472,7 @@ iframe {
   border-radius: 50%;
 }
 
-.faq-page .faq-block .question button::after {
+.faq-page .faq-block .faq-item .question button::after {
   content: "";
   display: inline-block;
   width: 10px;
@@ -481,8 +486,11 @@ iframe {
   margin-bottom: 5px;
 }
 
-.faq-page .faq-block .answer {
+.faq-page .faq-block .faq-item .answer {
   display: none;
+  margin-top: 60px;
+  font-size: 16px;
+  color: #adafb3;
 }
 
 @font-face {
